@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Services — Sleuth Forensics</title>
+  <meta name="description" content="Comprehensive cybersecurity services including security assessments, digital forensics, incident response, penetration testing, and compliance consulting.">
+  <link rel="canonical" href="https://sleuthforensics.in/services/">
+  <meta property="og:title" content="Cybersecurity Services — Sleuth Forensics">
+  <meta property="og:description" content="Security assessments, digital forensics, incident response, penetration testing, and compliance consulting services.">
+  <meta property="og:url" content="https://sleuthforensics.in/services/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css?v=5">
+  <link rel="stylesheet" href="../css/pages.css?v=5">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Sleuth Forensics — Home">
+        <!-- Logo: Magnifying glass + digital trace -->
+        <svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Outer glass rim with a thicker stroke -->
+  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
+  <!-- Glass inner highlight/gradient hint -->
+  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
+  <!-- A minimal digital/circuit node inside -->
+  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
+  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
+  <!-- The handle, styled with a distinct cap -->
+  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
+</svg>
+        <span class="header__logo-text">Sleuth <span>Forensics</span></span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button id="services-toggle" class="nav__link" aria-expanded="false" aria-controls="mega-menu">
+          Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <a href="/industries.html" class="nav__link">Industries</a>
+        <a href="/about.html" class="nav__link">About</a>
+        <a href="/resources.html" class="nav__link">Insights</a>
+        <a href="/contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="/contact.html" class="btn btn--primary btn--sm">Request Consultation</a>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mega Menu -->
+    <div id="mega-menu" class="mega-menu" role="region" aria-label="Services menu">
+      <div class="mega-menu__inner">
+        <div class="mega-menu__column">
+          <h3>Security</h3>
+          <a href="/services/cybersecurity-consulting.html" class="mega-menu__link">Cybersecurity Consulting</a>
+          <a href="/services/security-audits.html" class="mega-menu__link">Security Audits &amp; Reviews</a>
+          <a href="/services/vapt.html" class="mega-menu__link">Vulnerability Assessment &amp; Penetration Testing</a>
+          <a href="/services/network-security.html" class="mega-menu__link">Network Security</a>
+          <a href="/services/application-security.html" class="mega-menu__link">Application &amp; API Security</a>
+          <a href="/services/ot-security.html" class="mega-menu__link">OT Security Maturity Assessment</a>
+          <a href="/services/mobile-security.html" class="mega-menu__link">Mobile Application Security</a>
+          <a href="/services/cloud-security.html" class="mega-menu__link">Cloud Security</a>
+          <a href="/services/identity-security.html" class="mega-menu__link">Identity &amp; Active Directory Security</a>
+          <a href="/services/endpoint-security.html" class="mega-menu__link">Endpoint Security</a>
+        </div>
+        <div class="mega-menu__column">
+          <h3>Investigation</h3>
+          <a href="/services/digital-forensics.html" class="mega-menu__link">Digital Forensics &amp; Cyber Investigations</a>
+          <a href="/services/mobile-spyware.html" class="mega-menu__link" style="color: var(--blue-accent);">Mobile Phone Spyware Detection — <i>Is someone listening to your conversations?</i></a>
+          <a href="/services/dfir.html" class="mega-menu__link">Digital Forensics &amp; Incident Response</a>
+          <a href="/services/incident-response.html" class="mega-menu__link">Incident Response &amp; Breach Investigation</a>
+          <a href="/services/compromise-assessment.html" class="mega-menu__link">Compromise Assessment &amp; Threat Hunting</a>
+          <a href="/services/malware-analysis.html" class="mega-menu__link">Malware Analysis &amp; Reverse Engineering</a>
+        </div>
+        <div class="mega-menu__column">
+          <h3>Resilience</h3>
+          <a href="/services/ransomware.html" class="mega-menu__link">Ransomware Investigation &amp; Readiness</a>
+          <a href="/services/threat-intelligence.html" class="mega-menu__link">Threat Intelligence &amp; Attack Surface Monitoring</a>
+          <a href="/services/security-operations.html" class="mega-menu__link">Security Operations Maturity Assessment / SIEM / SOC Consulting</a>
+          <a href="/services/red-team.html" class="mega-menu__link">Red Teaming &amp; Adversary Simulation</a>
+          <a href="/services/compliance.html" class="mega-menu__link">Cybersecurity Compliance, GRC &amp; vCISO</a>
+          <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border);">
+            <a href="/services/" class="mega-menu__link" style="font-weight: 600; color: var(--blue-primary);">View All Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav__accordion">
+      <button class="mobile-nav__accordion-trigger" aria-expanded="false">
+        Services
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-nav__accordion-body">
+        <div class="mobile-nav__sub-heading">Security</div>
+        <a href="/services/cybersecurity-consulting.html" class="mobile-nav__sub-link">Cybersecurity Consulting</a>
+        <a href="/services/security-audits.html" class="mobile-nav__sub-link">Security Audits &amp; Reviews</a>
+        <a href="/services/vapt.html" class="mobile-nav__sub-link">VAPT</a>
+        <a href="/services/network-security.html" class="mobile-nav__sub-link">Network Security</a>
+        <a href="/services/application-security.html" class="mobile-nav__sub-link">Application &amp; API Security</a>
+        <a href="/services/ot-security.html" class="mobile-nav__sub-link">OT Security Maturity</a>
+        <a href="/services/mobile-security.html" class="mobile-nav__sub-link">Mobile Application Security</a>
+        <a href="/services/cloud-security.html" class="mobile-nav__sub-link">Cloud Security</a>
+        <a href="/services/identity-security.html" class="mobile-nav__sub-link">Identity &amp; AD Security</a>
+        <a href="/services/endpoint-security.html" class="mobile-nav__sub-link">Endpoint Security</a>
+        <div class="mobile-nav__sub-heading">Investigation</div>
+        <a href="/services/digital-forensics.html" class="mobile-nav__sub-link">Digital Forensics</a>
+        <a href="/services/mobile-spyware.html" class="mobile-nav__sub-link" style="color: var(--blue-accent);">Mobile Spyware Detection</a>
+        <a href="/services/dfir.html" class="mobile-nav__sub-link">DFIR</a>
+        <a href="/services/incident-response.html" class="mobile-nav__sub-link">Incident Response</a>
+        <a href="/services/compromise-assessment.html" class="mobile-nav__sub-link">Compromise Assessment</a>
+        <a href="/services/malware-analysis.html" class="mobile-nav__sub-link">Malware Analysis</a>
+        <div class="mobile-nav__sub-heading">Resilience</div>
+        <a href="/services/ransomware.html" class="mobile-nav__sub-link">Ransomware</a>
+        <a href="/services/threat-intelligence.html" class="mobile-nav__sub-link">Threat Intelligence</a>
+        <a href="/services/security-operations.html" class="mobile-nav__sub-link">SecOps Maturity / SIEM / SOC</a>
+        <a href="/services/red-team.html" class="mobile-nav__sub-link">Red Teaming</a>
+        <a href="/services/compliance.html" class="mobile-nav__sub-link">Compliance, GRC &amp; vCISO</a>
+        <a href="/services/" class="mobile-nav__sub-link" style="font-weight:600; color: var(--blue-primary); margin-top: var(--space-2);">View All Services</a>
+      </div>
+    </div>
+    <a href="/industries.html" class="mobile-nav__link">Industries</a>
+    <a href="/about.html" class="mobile-nav__link">About</a>
+    <a href="/resources.html" class="mobile-nav__link">Insights</a>
+    <a href="/contact.html" class="mobile-nav__link">Contact</a>
+    <div class="mobile-nav__cta">
+      <a href="/contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request Consultation</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <h1 class="page-hero__title">Our Services</h1>
+        <p class="page-hero__desc">Cybersecurity consulting, security assessments, digital forensics, incident response, and strategic advisory services for organisations across India.</p>
+      </div>
+    </section>
+
+
+    <!-- Security -->
+    <section class="section" id="security" aria-labelledby="security-heading">
+      <div class="container">
+        <div class="services-group">
+          <div class="services-group__header">
+            <svg class="services-group__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h2 id="security-heading" class="services-group__title">Security</h2>
+          </div>
+          <p class="t-body-lg t-muted" style="margin-bottom: var(--space-8); max-width: 640px;">Assess your security posture, identify vulnerabilities, and strengthen defences across your infrastructure, applications, cloud environments, and endpoints.</p>
+
+          <div class="services-list">
+            <a href="cybersecurity-consulting.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Cybersecurity Consulting &amp; Advisory</h3>
+              <p class="card__text">Strategic security guidance, programme development, and expert advisory for organisations building or improving their cybersecurity capabilities.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="security-audits.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Cybersecurity Audits &amp; Security Reviews</h3>
+              <p class="card__text">Systematic review of security controls, configurations, policies, and practices to identify gaps and measure effectiveness against established frameworks.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="vapt.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Vulnerability Assessment &amp; Penetration Testing</h3>
+              <p class="card__text">Identify and validate security weaknesses through structured vulnerability assessment and manual penetration testing of your systems and applications.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="network-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Network Security Assessment &amp; Testing</h3>
+              <p class="card__text">Evaluate your network architecture, segmentation, device configurations, and perimeter controls to identify exposure and lateral movement risks.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="application-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Web Application &amp; API Security Testing</h3>
+              <p class="card__text">Manual and automated security testing of web applications and APIs to identify authentication, authorisation, injection, and logic vulnerabilities.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="ot-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">OT Security Maturity Assessment</h3>
+              <p class="card__text">Evaluate the cybersecurity posture of your Operational Technology (OT) and Industrial Control Systems (ICS) to ensure physical processes remain secure and resilient.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="mobile-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Mobile Application Security Testing</h3>
+              <p class="card__text">Security assessment of iOS and Android applications, including local data storage, communication channels, authentication, and runtime protections.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="cloud-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Cloud Security Assessment &amp; Testing</h3>
+              <p class="card__text">Review cloud infrastructure configurations, access controls, storage policies, and security practices across AWS, Azure, GCP, and other cloud environments.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="identity-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Active Directory &amp; Identity Security</h3>
+              <p class="card__text">Assess Active Directory configurations, trust relationships, privilege escalation paths, and identity management controls to reduce credential-based risks.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="endpoint-security.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Endpoint Security Assessment &amp; Hardening</h3>
+              <p class="card__text">Evaluate endpoint configurations, security agent deployment, hardening baselines, and local privilege controls across workstations and servers.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Investigation -->
+    <section class="section section--alt" id="investigation" aria-labelledby="investigation-heading">
+      <div class="container">
+        <div class="services-group">
+          <div class="services-group__header">
+            <svg class="services-group__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <h2 id="investigation-heading" class="services-group__title">Investigation</h2>
+          </div>
+          <p class="t-body-lg t-muted" style="margin-bottom: var(--space-8); max-width: 640px;">Determine what happened, establish scope, reconstruct attacker activity, and support containment and recovery through structured digital forensic analysis and incident response.</p>
+
+          <div class="services-list">
+            <a href="digital-forensics.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Digital Forensics &amp; Cyber Investigations</h3>
+              <p class="card__text">Structured forensic examination of digital evidence to establish facts, reconstruct events, and support organisational decision-making.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="mobile-spyware.html" class="card card--compact" style="text-decoration:none; color:inherit; border-color: rgba(91,155,213,0.4); background: rgba(91,155,213,0.02);">
+              <h3 class="card__title" style="color: var(--blue-accent);">Mobile Phone Spyware Detection</h3>
+              <p class="card__text"><i>Is someone else listening to your conversations?</i> Advanced detection of Pegasus, stalkerware, and stealth monitoring tools on iOS and Android devices.</p>
+              <span class="card__link">Find out if you're compromised <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="dfir.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Digital Forensics &amp; Incident Response</h3>
+              <p class="card__text">Combined forensic analysis and incident response to investigate security incidents, determine scope, and guide recovery while preserving relevant evidence.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="incident-response.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Incident Response &amp; Breach Investigation</h3>
+              <p class="card__text">Rapid response support for organisations experiencing active security incidents, including containment guidance, forensic triage, and breach scope determination.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="compromise-assessment.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Compromise Assessment &amp; Threat Hunting</h3>
+              <p class="card__text">Proactive examination of your environment for indicators of compromise, persistent threats, and unauthorised activity that may have evaded existing detection capabilities.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="malware-analysis.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Malware Analysis &amp; Reverse Engineering</h3>
+              <p class="card__text">Static and dynamic analysis of suspicious files and executables to determine behaviour, capabilities, persistence mechanisms, and indicators of compromise.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Resilience -->
+    <section class="section" id="resilience" aria-labelledby="resilience-heading">
+      <div class="container">
+        <div class="services-group">
+          <div class="services-group__header">
+            <svg class="services-group__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <h2 id="resilience-heading" class="services-group__title">Resilience</h2>
+          </div>
+          <p class="t-body-lg t-muted" style="margin-bottom: var(--space-8); max-width: 640px;">Build organisational readiness for evolving threats through proactive security operations, adversary simulation, compliance programmes, and strategic advisory.</p>
+
+          <div class="services-list">
+            <a href="ransomware.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Ransomware Investigation &amp; Readiness</h3>
+              <p class="card__text">Assess your preparedness for ransomware scenarios, investigate active ransomware incidents, and develop response playbooks and recovery strategies.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="threat-intelligence.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Threat Intelligence &amp; Attack Surface Monitoring</h3>
+              <p class="card__text">Monitor your external attack surface, track relevant threat actor activity, and identify exposed assets, leaked credentials, and emerging risks.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="security-operations.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Security Operations Maturity Assessment / SIEM / SOC Consulting</h3>
+              <p class="card__text">Design, evaluate, and improve security operations capabilities, SIEM deployments, detection engineering, and SOC processes.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="red-team.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Red Teaming &amp; Adversary Simulation</h3>
+              <p class="card__text">Objective-based adversary simulations that test your detection and response capabilities against realistic attack scenarios targeting critical assets.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+            <a href="compliance.html" class="card card--compact" style="text-decoration:none; color:inherit;">
+              <h3 class="card__title">Cybersecurity Compliance, GRC &amp; vCISO</h3>
+              <p class="card__text">Compliance programme development, governance and risk management, regulatory alignment, and virtual CISO services for organisations requiring strategic security leadership.</p>
+              <span class="card__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="section--sm ir-banner">
+      <div class="container">
+        <div class="ir-banner__inner" style="padding: var(--space-10) 0;">
+          <div class="ir-banner__content">
+            <h2 class="ir-banner__title">Need help identifying the right service?</h2>
+            <p class="ir-banner__desc">Describe your situation and we will recommend the most appropriate engagement approach for your organisation.</p>
+          </div>
+          <a href="../contact.html" class="btn btn--primary btn--lg">Talk to Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="../" class="header__logo" style="margin-bottom: var(--space-2);"><svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="color:var(--blue-accent);">
+  <!-- Outer glass rim with a thicker stroke -->
+  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
+  <!-- Glass inner highlight/gradient hint -->
+  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
+  <!-- A minimal digital/circuit node inside -->
+  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
+  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
+  <!-- The handle, styled with a distinct cap -->
+  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
+</svg><span class="header__logo-text" style="color:var(--white);">Sleuth <span style="color:var(--gray-400);">Forensics</span></span></a>
+          <p class="footer__brand-desc">Cybersecurity services and digital forensics for organisations that take security, investigations, and resilience seriously.</p>
+        </div>
+        <div>
+          <h3 class="footer__heading">Services</h3>
+          <a href="cybersecurity-consulting.html" class="footer__link">Cybersecurity Consulting</a>
+          <a href="vapt.html" class="footer__link">Penetration Testing</a>
+          <a href="digital-forensics.html" class="footer__link">Digital Forensics</a>
+          <a href="dfir.html" class="footer__link">DFIR</a>
+          <a href="incident-response.html" class="footer__link">Incident Response</a>
+          <a href="red-team.html" class="footer__link">Red Teaming</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">Company</h3>
+          <a href="../about.html" class="footer__link">About Us</a>
+          <a href="../industries.html" class="footer__link">Industries</a>
+          <a href="../resources.html" class="footer__link">Insights</a>
+          <a href="../contact.html" class="footer__link">Contact</a>
+          <a href="../privacy.html" class="footer__link">Privacy Policy</a>
+          <a href="../terms.html" class="footer__link">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span data-config="copyrightYear">2026</span> Sleuth Forensics. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="LINKEDIN_URL_HERE" data-config="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="TWITTER_URL_HERE" data-config="twitter" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M13.232 10.232L20 4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
