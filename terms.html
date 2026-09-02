@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Sleuth Forensics</title>
+  <meta name="description" content="Sleuth Forensics terms of service governing the use of our website.">
+  <link rel="canonical" href="https://sleuthforensics.in/terms.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=5"><link rel="stylesheet" href="css/pages.css?v=5">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="Sleuth Forensics — Home">
+        <!-- Logo: Magnifying glass + digital trace -->
+        <svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Outer glass rim with a thicker stroke -->
+  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
+  <!-- Glass inner highlight/gradient hint -->
+  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
+  <!-- A minimal digital/circuit node inside -->
+  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
+  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
+  <!-- The handle, styled with a distinct cap -->
+  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
+</svg>
+        <span class="header__logo-text">Sleuth <span>Forensics</span></span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button id="services-toggle" class="nav__link" aria-expanded="false" aria-controls="mega-menu">
+          Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <a href="/industries.html" class="nav__link">Industries</a>
+        <a href="/about.html" class="nav__link">About</a>
+        <a href="/resources.html" class="nav__link">Insights</a>
+        <a href="/contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="/contact.html" class="btn btn--primary btn--sm">Request Consultation</a>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mega Menu -->
+    <div id="mega-menu" class="mega-menu" role="region" aria-label="Services menu">
+      <div class="mega-menu__inner">
+        <div class="mega-menu__column">
+          <h3>Security</h3>
+          <a href="/services/cybersecurity-consulting.html" class="mega-menu__link">Cybersecurity Consulting</a>
+          <a href="/services/security-audits.html" class="mega-menu__link">Security Audits &amp; Reviews</a>
+          <a href="/services/vapt.html" class="mega-menu__link">Vulnerability Assessment &amp; Penetration Testing</a>
+          <a href="/services/network-security.html" class="mega-menu__link">Network Security</a>
+          <a href="/services/application-security.html" class="mega-menu__link">Application &amp; API Security</a>
+          <a href="/services/ot-security.html" class="mega-menu__link">OT Security Maturity Assessment</a>
+          <a href="/services/mobile-security.html" class="mega-menu__link">Mobile Application Security</a>
+          <a href="/services/cloud-security.html" class="mega-menu__link">Cloud Security</a>
+          <a href="/services/identity-security.html" class="mega-menu__link">Identity &amp; Active Directory Security</a>
+          <a href="/services/endpoint-security.html" class="mega-menu__link">Endpoint Security</a>
+        </div>
+        <div class="mega-menu__column">
+          <h3>Investigation</h3>
+          <a href="/services/digital-forensics.html" class="mega-menu__link">Digital Forensics &amp; Cyber Investigations</a>
+          <a href="/services/mobile-spyware.html" class="mega-menu__link" style="color: var(--blue-accent);">Mobile Phone Spyware Detection — <i>Is someone listening to your conversations?</i></a>
+          <a href="/services/dfir.html" class="mega-menu__link">Digital Forensics &amp; Incident Response</a>
+          <a href="/services/incident-response.html" class="mega-menu__link">Incident Response &amp; Breach Investigation</a>
+          <a href="/services/compromise-assessment.html" class="mega-menu__link">Compromise Assessment &amp; Threat Hunting</a>
+          <a href="/services/malware-analysis.html" class="mega-menu__link">Malware Analysis &amp; Reverse Engineering</a>
+        </div>
+        <div class="mega-menu__column">
+          <h3>Resilience</h3>
+          <a href="/services/ransomware.html" class="mega-menu__link">Ransomware Investigation &amp; Readiness</a>
+          <a href="/services/threat-intelligence.html" class="mega-menu__link">Threat Intelligence &amp; Attack Surface Monitoring</a>
+          <a href="/services/security-operations.html" class="mega-menu__link">Security Operations Maturity Assessment / SIEM / SOC Consulting</a>
+          <a href="/services/red-team.html" class="mega-menu__link">Red Teaming &amp; Adversary Simulation</a>
+          <a href="/services/compliance.html" class="mega-menu__link">Cybersecurity Compliance, GRC &amp; vCISO</a>
+          <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border);">
+            <a href="/services/" class="mega-menu__link" style="font-weight: 600; color: var(--blue-primary);">View All Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav__accordion">
+      <button class="mobile-nav__accordion-trigger" aria-expanded="false">
+        Services
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mobile-nav__accordion-body">
+        <div class="mobile-nav__sub-heading">Security</div>
+        <a href="/services/cybersecurity-consulting.html" class="mobile-nav__sub-link">Cybersecurity Consulting</a>
+        <a href="/services/security-audits.html" class="mobile-nav__sub-link">Security Audits &amp; Reviews</a>
+        <a href="/services/vapt.html" class="mobile-nav__sub-link">VAPT</a>
+        <a href="/services/network-security.html" class="mobile-nav__sub-link">Network Security</a>
+        <a href="/services/application-security.html" class="mobile-nav__sub-link">Application &amp; API Security</a>
+        <a href="/services/ot-security.html" class="mobile-nav__sub-link">OT Security Maturity</a>
+        <a href="/services/mobile-security.html" class="mobile-nav__sub-link">Mobile Application Security</a>
+        <a href="/services/cloud-security.html" class="mobile-nav__sub-link">Cloud Security</a>
+        <a href="/services/identity-security.html" class="mobile-nav__sub-link">Identity &amp; AD Security</a>
+        <a href="/services/endpoint-security.html" class="mobile-nav__sub-link">Endpoint Security</a>
+        <div class="mobile-nav__sub-heading">Investigation</div>
+        <a href="/services/digital-forensics.html" class="mobile-nav__sub-link">Digital Forensics</a>
+        <a href="/services/mobile-spyware.html" class="mobile-nav__sub-link" style="color: var(--blue-accent);">Mobile Spyware Detection</a>
+        <a href="/services/dfir.html" class="mobile-nav__sub-link">DFIR</a>
+        <a href="/services/incident-response.html" class="mobile-nav__sub-link">Incident Response</a>
+        <a href="/services/compromise-assessment.html" class="mobile-nav__sub-link">Compromise Assessment</a>
+        <a href="/services/malware-analysis.html" class="mobile-nav__sub-link">Malware Analysis</a>
+        <div class="mobile-nav__sub-heading">Resilience</div>
+        <a href="/services/ransomware.html" class="mobile-nav__sub-link">Ransomware</a>
+        <a href="/services/threat-intelligence.html" class="mobile-nav__sub-link">Threat Intelligence</a>
+        <a href="/services/security-operations.html" class="mobile-nav__sub-link">SecOps Maturity / SIEM / SOC</a>
+        <a href="/services/red-team.html" class="mobile-nav__sub-link">Red Teaming</a>
+        <a href="/services/compliance.html" class="mobile-nav__sub-link">Compliance, GRC &amp; vCISO</a>
+        <a href="/services/" class="mobile-nav__sub-link" style="font-weight:600; color: var(--blue-primary); margin-top: var(--space-2);">View All Services</a>
+      </div>
+    </div>
+    <a href="/industries.html" class="mobile-nav__link">Industries</a>
+    <a href="/about.html" class="mobile-nav__link">About</a>
+    <a href="/resources.html" class="mobile-nav__link">Insights</a>
+    <a href="/contact.html" class="mobile-nav__link">Contact</a>
+    <div class="mobile-nav__cta">
+      <a href="/contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request Consultation</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">Terms of Service</span></nav>
+        <h1 class="page-hero__title">Terms of Service</h1>
+        <p class="page-hero__desc">Terms governing the use of the Sleuth Forensics website.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="legal-content">
+          <p><strong>Last updated:</strong> September 2026</p>
+
+          <h2>Acceptance of Terms</h2>
+          <p>By accessing and using this website, you accept and agree to be bound by these terms. If you do not agree to these terms, please do not use this website.</p>
+
+          <h2>Use of Website</h2>
+          <p>This website is provided for informational purposes about Sleuth Forensics and our cybersecurity services. You may use this website for lawful purposes only. You must not use this website in any way that could damage, disable, or impair the website or interfere with any other user's use of the website.</p>
+
+          <h2>Intellectual Property</h2>
+          <p>All content on this website, including text, graphics, logos, icons, and software, is the property of Sleuth Forensics or its content suppliers and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from this content without prior written consent.</p>
+
+          <h2>Service Information</h2>
+          <p>Information about our services provided on this website is for general informational purposes. Specific service terms, scope, deliverables, and pricing are defined in individual engagement agreements between Sleuth Forensics and the client.</p>
+
+          <h2>No Professional Advice</h2>
+          <p>The content on this website does not constitute professional cybersecurity advice. For specific guidance related to your organisation's security needs, please contact us directly to discuss your requirements.</p>
+
+          <h2>Limitation of Liability</h2>
+          <p>Sleuth Forensics shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of this website or reliance on any information provided herein.</p>
+
+          <h2>External Links</h2>
+          <p>This website may contain links to external websites. Sleuth Forensics is not responsible for the content, privacy practices, or availability of external websites.</p>
+
+          <h2>Changes to Terms</h2>
+          <p>We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated revision date. Continued use of the website constitutes acceptance of the modified terms.</p>
+
+          <h2>Governing Law</h2>
+          <p>These terms are governed by the laws of India. Any disputes arising from the use of this website shall be subject to the jurisdiction of the courts in India.</p>
+
+          <h2>Contact</h2>
+          <p>If you have questions about these terms, please contact us:</p>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo"><div class="container"><div class="footer__grid"><div><a href="/" class="header__logo" style="margin-bottom:var(--space-2);"><svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="color:var(--blue-accent);">
+  <!-- Outer glass rim with a thicker stroke -->
+  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
+  <!-- Glass inner highlight/gradient hint -->
+  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
+  <!-- A minimal digital/circuit node inside -->
+  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
+  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
+  <!-- The handle, styled with a distinct cap -->
+  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
+</svg><span class="header__logo-text" style="color:var(--white);">Sleuth <span style="color:var(--gray-400);">Forensics</span></span></a><p class="footer__brand-desc">Cybersecurity services and digital forensics for organisations that take security, investigations, and resilience seriously.</p></div><div><h3 class="footer__heading">Services</h3><a href="services/vapt.html" class="footer__link">Penetration Testing</a><a href="services/digital-forensics.html" class="footer__link">Digital Forensics</a><a href="services/dfir.html" class="footer__link">DFIR</a><a href="services/" class="footer__link">All Services</a></div><div><h3 class="footer__heading">Company</h3><a href="about.html" class="footer__link">About</a><a href="industries.html" class="footer__link">Industries</a><a href="contact.html" class="footer__link">Contact</a><a href="privacy.html" class="footer__link">Privacy</a><a href="terms.html" class="footer__link">Terms</a></div></div><div class="footer__bottom"><p>&copy; <span data-config="copyrightYear">2026</span> Sleuth Forensics. All rights reserved.</p></div></div></footer>
+  <script src="config.js"></script><script src="js/main.js"></script>
+</body>
+</html>
+
