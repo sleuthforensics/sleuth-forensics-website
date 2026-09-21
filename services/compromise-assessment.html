@@ -1,217 +1,253 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHT1ZTL52J"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-XHT1ZTL52J');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Compromise Assessment &amp; Threat Hunting — Sleuth Forensics</title>
   <meta name="description" content="Proactive examination of your environment for indicators of compromise, persistent threats, and unauthorised activity.">
   <link rel="canonical" href="https://sleuthforensics.in/services/compromise-assessment.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sleuth Forensics">
   <meta property="og:title" content="Compromise Assessment &amp; Threat Hunting — Sleuth Forensics">
   <meta property="og:description" content="Proactive examination of your environment for indicators of compromise, persistent threats, and unauthorised activity.">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css?v=5"><link rel="stylesheet" href="../css/pages.css?v=5">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta property="og:url" content="https://sleuthforensics.in/services/compromise-assessment.html">
+  <meta property="og:image" content="https://sleuthforensics.in/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#f2efe8">
+  <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="../css/site.css">
+
+  <script defer src="../js/site.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHT1ZTL52J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XHT1ZTL52J');
+  </script>
 </head>
 <body>
-  <header class="header" role="banner">
-    <div class="header__inner">
-      <a href="../index.html" class="header__logo" aria-label="Sleuth Forensics — Home">
-        <!-- Logo: Magnifying glass + digital trace -->
-        <svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <!-- Outer glass rim with a thicker stroke -->
-  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
-  <!-- Glass inner highlight/gradient hint -->
-  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
-  <!-- A minimal digital/circuit node inside -->
-  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
-  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
-  <!-- The handle, styled with a distinct cap -->
-  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
-  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
-</svg>
-        <span class="header__logo-text">Sleuth <span>Forensics</span></span>
-      </a>
+  <a class="skip" href="#main">Skip to content</a>
 
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <button id="services-toggle" class="nav__link" aria-expanded="false" aria-controls="mega-menu">
-          Services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <a href="../industries.html" class="nav__link">Industries</a>
-        <a href="../about.html" class="nav__link">About</a>
-        <a href="../resources.html" class="nav__link">Insights</a>
-        <a href="../contact.html" class="nav__link">Contact</a>
+  <header class="masthead" data-scrolled="false" data-open="false">
+    <div class="wrap masthead__bar">
+      <a class="wordmark" href="../index.html">Sleuth <span>Forensics</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <button type="button" id="nav-services" class="nav__item nav__toggle" data-panel-trigger aria-expanded="false" aria-controls="index-panel">Services</button>
+        <a class="nav__item" href="../industries.html">Industries</a>
+        <a class="nav__item" href="../about.html">About</a>
+        <a class="nav__item" href="../contact.html">Contact</a>
       </nav>
 
-      <div class="header__actions">
-        <a href="../contact.html" class="btn btn--primary btn--sm">Request Consultation</a>
-      </div>
-
-      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
+      <button type="button" id="nav-menu" class="burger" data-panel-trigger aria-expanded="false" aria-controls="index-panel" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
 
-    <!-- Mega Menu -->
-    <div id="mega-menu" class="mega-menu" role="region" aria-label="Services menu">
-      <div class="mega-menu__inner">
-        <div class="mega-menu__column">
-          <h3>Security</h3>
-          <a href="../services/cybersecurity-consulting.html" class="mega-menu__link">Cybersecurity Consulting</a>
-          <a href="../services/security-audits.html" class="mega-menu__link">Security Audits &amp; Reviews</a>
-          <a href="../services/vapt.html" class="mega-menu__link">Vulnerability Assessment &amp; Penetration Testing</a>
-          <a href="../services/network-security.html" class="mega-menu__link">Network Security</a>
-          <a href="../services/application-security.html" class="mega-menu__link">Application &amp; API Security</a>
-          <a href="../services/ot-security.html" class="mega-menu__link">OT Security Maturity Assessment</a>
-          <a href="../services/mobile-security.html" class="mega-menu__link">Mobile Application Security</a>
-          <a href="../services/cloud-security.html" class="mega-menu__link">Cloud Security</a>
-          <a href="../services/identity-security.html" class="mega-menu__link">Identity &amp; Active Directory Security</a>
-          <a href="../services/endpoint-security.html" class="mega-menu__link">Endpoint Security</a>
-        </div>
-        <div class="mega-menu__column">
-          <h3>Investigation</h3>
-          <a href="../services/digital-forensics.html" class="mega-menu__link">Digital Forensics &amp; Cyber Investigations</a>
-          <a href="../services/mobile-spyware.html" class="mega-menu__link" style="color: var(--blue-accent);">Mobile Phone Spyware Detection — <i>Is someone listening to your conversations?</i></a>
-          <a href="../services/dfir.html" class="mega-menu__link">Digital Forensics &amp; Incident Response</a>
-          <a href="../services/incident-response.html" class="mega-menu__link">Incident Response &amp; Breach Investigation</a>
-          <a href="../services/compromise-assessment.html" class="mega-menu__link">Compromise Assessment &amp; Threat Hunting</a>
-          <a href="../services/malware-analysis.html" class="mega-menu__link">Malware Analysis &amp; Reverse Engineering</a>
-        </div>
-        <div class="mega-menu__column">
-          <h3>Resilience</h3>
-          <a href="../services/ransomware.html" class="mega-menu__link">Ransomware Investigation &amp; Readiness</a>
-          <a href="../services/threat-intelligence.html" class="mega-menu__link">Threat Intelligence &amp; Attack Surface Monitoring</a>
-          <a href="../services/security-operations.html" class="mega-menu__link">Security Operations Maturity Assessment / SIEM / SOC Consulting</a>
-          <a href="../services/red-team.html" class="mega-menu__link">Red Teaming &amp; Adversary Simulation</a>
-          <a href="../services/compliance.html" class="mega-menu__link">Cybersecurity Compliance, GRC &amp; vCISO</a>
-          <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border);">
-            <a href="../services/index.html" class="mega-menu__link" style="font-weight: 600; color: var(--blue-primary);">View All Services</a>
+    <div class="scrim" aria-hidden="true"></div>
+
+    <div class="panel" id="index-panel" data-open="false">
+      <div class="wrap panel__inner">
+        <nav class="panel__primary" aria-label="Sections">
+          <a href="../services/index.html" aria-current="page">All services</a>
+          <a href="../industries.html">Industries</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+
+        <div class="panel__groups">
+        <nav class="panel__group" aria-labelledby="idx-security">
+          <h2 id="idx-security">Security</h2>
+          <div class="idx">
+            <a href="../services/cybersecurity-consulting.html"><span class="idx__n">01</span><span>Cybersecurity Consulting</span></a>
+            <a href="../services/security-audits.html"><span class="idx__n">02</span><span>Security Audits &amp; Reviews</span></a>
+            <a href="../services/vapt.html"><span class="idx__n">03</span><span>Penetration Testing</span></a>
+            <a href="../services/network-security.html"><span class="idx__n">04</span><span>Network Security</span></a>
+            <a href="../services/application-security.html"><span class="idx__n">05</span><span>Application &amp; API Security</span></a>
+            <a href="../services/ot-security.html"><span class="idx__n">06</span><span>OT Security Maturity</span></a>
+            <a href="../services/mobile-security.html"><span class="idx__n">07</span><span>Mobile Application Security</span></a>
+            <a href="../services/cloud-security.html"><span class="idx__n">08</span><span>Cloud Security</span></a>
+            <a href="../services/identity-security.html"><span class="idx__n">09</span><span>Identity &amp; Active Directory</span></a>
+            <a href="../services/endpoint-security.html"><span class="idx__n">10</span><span>Endpoint Security</span></a>
           </div>
+        </nav>
+        <nav class="panel__group" aria-labelledby="idx-investigation">
+          <h2 id="idx-investigation">Investigation</h2>
+          <div class="idx">
+            <a href="../services/digital-forensics.html"><span class="idx__n">11</span><span>Digital Forensics</span></a>
+            <a href="../services/mobile-spyware.html"><span class="idx__n">12</span><span>Mobile Spyware Detection</span></a>
+            <a href="../services/dfir.html"><span class="idx__n">13</span><span>Digital Forensics &amp; IR</span></a>
+            <a href="../services/incident-response.html"><span class="idx__n">14</span><span>Incident Response</span></a>
+            <a href="../services/compromise-assessment.html" aria-current="page"><span class="idx__n">15</span><span>Compromise Assessment</span></a>
+            <a href="../services/malware-analysis.html"><span class="idx__n">16</span><span>Malware Analysis</span></a>
+          </div>
+        </nav>
+        <nav class="panel__group" aria-labelledby="idx-resilience">
+          <h2 id="idx-resilience">Resilience</h2>
+          <div class="idx">
+            <a href="../services/ransomware.html"><span class="idx__n">17</span><span>Ransomware Readiness</span></a>
+            <a href="../services/threat-intelligence.html"><span class="idx__n">18</span><span>Threat Intelligence</span></a>
+            <a href="../services/security-operations.html"><span class="idx__n">19</span><span>Security Operations &amp; SOC</span></a>
+            <a href="../services/red-team.html"><span class="idx__n">20</span><span>Red Teaming</span></a>
+            <a href="../services/compliance.html"><span class="idx__n">21</span><span>Compliance, GRC &amp; vCISO</span></a>
+          </div>
+        </nav>
+        </div>
+
+        <div class="panel__foot">
+          <p class="meta">Sleuth Forensics Consultancy Services &middot; Bengaluru, Karnataka, India</p>
+          <a class="cta" href="../contact.html">Send an enquiry</a>
         </div>
       </div>
     </div>
   </header>
-  <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
-    <div class="mobile-nav__accordion">
-      <button class="mobile-nav__accordion-trigger" aria-expanded="false">
-        Services
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="mobile-nav__accordion-body">
-        <div class="mobile-nav__sub-heading">Security</div>
-        <a href="../services/cybersecurity-consulting.html" class="mobile-nav__sub-link">Cybersecurity Consulting</a>
-        <a href="../services/security-audits.html" class="mobile-nav__sub-link">Security Audits &amp; Reviews</a>
-        <a href="../services/vapt.html" class="mobile-nav__sub-link">VAPT</a>
-        <a href="../services/network-security.html" class="mobile-nav__sub-link">Network Security</a>
-        <a href="../services/application-security.html" class="mobile-nav__sub-link">Application &amp; API Security</a>
-        <a href="../services/ot-security.html" class="mobile-nav__sub-link">OT Security Maturity</a>
-        <a href="../services/mobile-security.html" class="mobile-nav__sub-link">Mobile Application Security</a>
-        <a href="../services/cloud-security.html" class="mobile-nav__sub-link">Cloud Security</a>
-        <a href="../services/identity-security.html" class="mobile-nav__sub-link">Identity &amp; AD Security</a>
-        <a href="../services/endpoint-security.html" class="mobile-nav__sub-link">Endpoint Security</a>
-        <div class="mobile-nav__sub-heading">Investigation</div>
-        <a href="../services/digital-forensics.html" class="mobile-nav__sub-link">Digital Forensics</a>
-        <a href="../services/mobile-spyware.html" class="mobile-nav__sub-link" style="color: var(--blue-accent);">Mobile Spyware Detection</a>
-        <a href="../services/dfir.html" class="mobile-nav__sub-link">DFIR</a>
-        <a href="../services/incident-response.html" class="mobile-nav__sub-link">Incident Response</a>
-        <a href="../services/compromise-assessment.html" class="mobile-nav__sub-link">Compromise Assessment</a>
-        <a href="../services/malware-analysis.html" class="mobile-nav__sub-link">Malware Analysis</a>
-        <div class="mobile-nav__sub-heading">Resilience</div>
-        <a href="../services/ransomware.html" class="mobile-nav__sub-link">Ransomware</a>
-        <a href="../services/threat-intelligence.html" class="mobile-nav__sub-link">Threat Intelligence</a>
-        <a href="../services/security-operations.html" class="mobile-nav__sub-link">SecOps Maturity / SIEM / SOC</a>
-        <a href="../services/red-team.html" class="mobile-nav__sub-link">Red Teaming</a>
-        <a href="../services/compliance.html" class="mobile-nav__sub-link">Compliance, GRC &amp; vCISO</a>
-        <a href="../services/index.html" class="mobile-nav__sub-link" style="font-weight:600; color: var(--blue-primary); margin-top: var(--space-2);">View All Services</a>
-      </div>
-    </div>
-    <a href="../industries.html" class="mobile-nav__link">Industries</a>
-    <a href="../about.html" class="mobile-nav__link">About</a>
-    <a href="../resources.html" class="mobile-nav__link">Insights</a>
-    <a href="../contact.html" class="mobile-nav__link">Contact</a>
-    <div class="mobile-nav__cta">
-      <a href="../contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request Consultation</a>
-    </div>
-  </nav>
 
-  <main id="main-content">
-    <section class="service-detail">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><a href="../services/">Services</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">Compromise Assessment</span></nav>
-        <div class="service-detail__header">
-          <div class="service-detail__category">Investigation</div>
-          <h1 class="service-detail__title">Compromise Assessment &amp; Threat Hunting</h1>
-          <p class="service-detail__intro">Proactive examination of your environment to identify indicators of compromise, persistent threats, and unauthorised activity that may have evaded your existing detection capabilities.</p>
+  <main id="main">
+
+    <article class="page-head">
+      <div class="wrap">
+        <nav class="crumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="index.html">Services</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Compromise Assessment</span>
+        </nav>
+
+        <div class="doc-head">
+          <p class="label doc-head__cat"><a href="index.html#investigation">15 &middot; Investigation</a></p>
+          <h1 class="h1 page-head__title">Compromise Assessment &amp; Threat Hunting</h1>
+          <p class="lead">Proactive examination of your environment to identify indicators of compromise, persistent threats, and unauthorised activity that may have evaded your existing detection capabilities.</p>
         </div>
-        <div class="service-detail__layout">
-          <div class="service-detail__body">
+      </div>
+    </article>
+
+    <section class="section section--ruled">
+      <div class="wrap"><div class="doc">
+        <div class="prose">
             <h2>Overview</h2>
             <p>Not all compromises are immediately apparent. Sophisticated attackers can maintain persistent access for extended periods, and existing security controls may not detect all forms of unauthorised activity. A compromise assessment proactively hunts for evidence of current or past intrusions across your environment.</p>
             <p>This service is particularly valuable when an organisation suspects compromise but has no confirmed indicators, or when there is a need to verify that no undetected threats exist in the environment.</p>
             <h2>Who This Is For</h2>
             <ul>
-              <li>Organisations that suspect compromise but lack confirmed evidence</li>
-              <li>Companies seeking periodic threat hunting as a proactive measure</li>
-              <li>Organisations going through mergers, acquisitions, or significant transitions</li>
-              <li>Companies with concerns about insider threats</li>
-              <li>Organisations that have not previously conducted a thorough compromise review</li>
+            <li>Organisations that suspect compromise but lack confirmed evidence</li>
+            <li>Companies seeking periodic threat hunting as a proactive measure</li>
+            <li>Organisations going through mergers, acquisitions, or significant transitions</li>
+            <li>Companies with concerns about insider threats</li>
+            <li>Organisations that have not previously conducted a thorough compromise review</li>
             </ul>
             <h2>What We Examine</h2>
             <ul>
-              <li>Endpoint telemetry and forensic artefacts</li>
-              <li>Network traffic patterns and anomalies</li>
-              <li>Authentication logs and access patterns</li>
-              <li>Known threat actor techniques, tactics, and procedures</li>
-              <li>Persistence mechanisms and scheduled tasks</li>
-              <li>Unusual process execution and service configurations</li>
-              <li>Indicators of compromise from threat intelligence sources</li>
-              <li>Email and communication artefacts</li>
+            <li>Endpoint telemetry and forensic artefacts</li>
+            <li>Network traffic patterns and anomalies</li>
+            <li>Authentication logs and access patterns</li>
+            <li>Known threat actor techniques, tactics, and procedures</li>
+            <li>Persistence mechanisms and scheduled tasks</li>
+            <li>Unusual process execution and service configurations</li>
+            <li>Indicators of compromise from threat intelligence sources</li>
+            <li>Email and communication artefacts</li>
             </ul>
             <h2>What You Receive</h2>
             <ul>
-              <li>Compromise assessment report with findings and evidence</li>
-              <li>Indicators of compromise identified during the assessment</li>
-              <li>Threat hunting analysis and methodology documentation</li>
-              <li>Recommendations for detection improvement</li>
-              <li>Escalation support if active compromise is confirmed</li>
+            <li>Compromise assessment report with findings and evidence</li>
+            <li>Indicators of compromise identified during the assessment</li>
+            <li>Threat hunting analysis and methodology documentation</li>
+            <li>Recommendations for detection improvement</li>
+            <li>Escalation support if active compromise is confirmed</li>
             </ul>
-          </div>
-          <aside class="service-sidebar">
-            <div class="service-sidebar__section"><h3 class="service-sidebar__heading">Related Services</h3><a href="dfir.html" class="service-sidebar__link">DFIR</a><a href="threat-intelligence.html" class="service-sidebar__link">Threat Intelligence</a><a href="malware-analysis.html" class="service-sidebar__link">Malware Analysis</a><a href="security-operations.html" class="service-sidebar__link">Security Operations</a></div>
-            <div class="service-sidebar__section"><h3 class="service-sidebar__heading">Discuss This Service</h3><p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--space-4);">Speak with us about your requirements.</p><a href="../contact.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">Get in Touch</a></div>
-          </aside>
         </div>
-      </div>
+
+        <aside class="aside" aria-label="Related">
+          <div class="aside__block">
+            <h2>Related services</h2>
+            <div class="aside__links">
+            <a href="dfir.html">DFIR</a>
+            <a href="threat-intelligence.html">Threat Intelligence</a>
+            <a href="malware-analysis.html">Malware Analysis</a>
+            <a href="security-operations.html">Security Operations</a>
+            </div>
+          </div>
+
+          <div class="aside__block">
+            <h2>Discuss this service</h2>
+            <p class="aside__note">Tell us the scope you have in mind, or the problem you are trying to solve, and we will come back with an approach.</p>
+            <a class="btn btn--solid" href="../contact.html">Start a conversation</a>
+          </div>
+        </aside>
+      </div></div>
     </section>
+
   </main>
 
-  <footer class="footer" role="contentinfo"><div class="container"><div class="footer__grid"><div><a href="../" class="header__logo" style="margin-bottom:var(--space-2);"><svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="color:var(--blue-accent);">
-  <!-- Outer glass rim with a thicker stroke -->
-  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
-  <!-- Glass inner highlight/gradient hint -->
-  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
-  <!-- A minimal digital/circuit node inside -->
-  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
-  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
-  <!-- The handle, styled with a distinct cap -->
-  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
-  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
-</svg><span class="header__logo-text" style="color:var(--white);">Sleuth <span style="color:var(--gray-400);">Forensics</span></span></a><p class="footer__brand-desc">Cybersecurity services and digital forensics for organisations that take security, investigations, and resilience seriously.</p></div><div><h3 class="footer__heading">Services</h3><a href="vapt.html" class="footer__link">Penetration Testing</a><a href="digital-forensics.html" class="footer__link">Digital Forensics</a><a href="dfir.html" class="footer__link">DFIR</a><a href="incident-response.html" class="footer__link">Incident Response</a><a href="../services/" class="footer__link">All Services</a></div><div><h3 class="footer__heading">Company</h3><a href="../about.html" class="footer__link">About</a><a href="../industries.html" class="footer__link">Industries</a><a href="../contact.html" class="footer__link">Contact</a><a href="../privacy.html" class="footer__link">Privacy</a><a href="../terms.html" class="footer__link">Terms</a></div></div><div class="footer__bottom"><p>&copy; <span data-config="copyrightYear">2026</span> Sleuth Forensics. All rights reserved.</p></div></div></footer>
-  <script src="../config.js"></script><script src="../js/main.js"></script>
-</body>
-</html>
+  <footer class="colophon on-ink">
+    <div class="wrap">
+      <div class="colophon__grid">
+        <div>
+          <a class="wordmark" href="../index.html">Sleuth <span>Forensics</span></a>
+          <p class="colophon__blurb">Cybersecurity assessment, digital forensics, and incident response for organisations that need findings they can act on.</p>
+          <div class="colophon__contact">
+            <span>Sleuth Forensics Consultancy Services</span>
+            <span>Bengaluru, Karnataka, India</span>
+            <a href="../contact.html">Send an enquiry</a>
+          </div>
+        </div>
 
+        <div>
+          <h2>Security</h2>
+          <div class="colophon__links">
+            <a href="../services/vapt.html">Penetration Testing</a>
+            <a href="../services/security-audits.html">Security Audits</a>
+            <a href="../services/cloud-security.html">Cloud Security</a>
+            <a href="../services/application-security.html">Application Security</a>
+            <a href="../services/ot-security.html">OT Security</a>
+          </div>
+        </div>
+
+        <div>
+          <h2>Investigation</h2>
+          <div class="colophon__links">
+            <a href="../services/digital-forensics.html">Digital Forensics</a>
+            <a href="../services/dfir.html">DFIR</a>
+            <a href="../services/incident-response.html">Incident Response</a>
+            <a href="../services/mobile-spyware.html">Spyware Detection</a>
+            <a href="../services/malware-analysis.html">Malware Analysis</a>
+          </div>
+        </div>
+
+        <div>
+          <h2>Practice</h2>
+          <div class="colophon__links">
+            <a href="../services/index.html">All 21 services</a>
+            <a href="../industries.html">Industries</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="colophon__base">
+        <p>&copy; 2026 Sleuth Forensics</p>
+        <nav aria-label="Legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

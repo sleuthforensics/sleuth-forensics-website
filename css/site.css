@@ -1,0 +1,1053 @@
+/* ===========================================================
+   Sleuth Forensics
+   Type   Source Serif 4 (optical sizing) + IBM Plex Mono
+   Colour warm paper, ink, one vermilion accent
+   =========================================================== */
+
+/* --- 1. Tokens ------------------------------------------- */
+
+:root {
+  /* The palette is printed paper and ink. There is no dark variant, so pin
+     the browser's own chrome to light rather than let it guess. */
+  color-scheme: light;
+
+  /* Surface */
+  --paper:        #f2efe8;
+  --paper-raised: #f8f6f1;
+  --ink:          #191a18;
+
+  /* Text */
+  --text:          #191a18;
+  --text-2:        #3d3f3a;  /*  9.3:1 on paper */
+  --text-3:        #63655f;  /*  5.1:1 on paper */
+  --text-on-ink:   #f2efe8;  /* 15.2:1 on ink   */
+  --text-2-on-ink: #a8a79e;  /*  7.2:1 on ink   */
+
+  /* Accent */
+  --mark:        #b2381f;  /*  5.4:1 on paper */
+  --mark-deep:   #8d2b16;
+  --mark-on-ink: #e4714f;  /*  5.6:1 on ink   */
+
+  /* Lines */
+  --rule:        #dcd6c9;
+  --rule-strong: #c3bcab;
+  --rule-input:  #8d887c;  /*  3.1:1 — UI border */
+  --rule-on-ink: #35372f;
+
+  /* Type */
+  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --mono:  'IBM Plex Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --t-display: clamp(2.6rem, 1.35rem + 5.3vw, 5.75rem);
+  --t-h1:      clamp(2.15rem, 1.35rem + 3.4vw, 4rem);
+  --t-h2:      clamp(1.7rem, 1.28rem + 1.8vw, 2.7rem);
+  --t-h3:      clamp(1.15rem, 1.08rem + 0.3vw, 1.35rem);
+  --t-lead:    clamp(1.1rem, 1.02rem + 0.42vw, 1.4rem);
+  --t-body:    1.0625rem;
+  --t-small:   0.9375rem;
+  --t-meta:    0.8125rem;
+  --t-label:   0.6875rem;
+
+  /* Space */
+  --s1: 0.25rem;  --s2: 0.5rem;  --s3: 0.75rem;  --s4: 1rem;
+  --s5: 1.5rem;   --s6: 2rem;    --s7: 3rem;     --s8: 4rem;
+
+  --section-y: clamp(3.5rem, 2rem + 6vw, 7.5rem);
+  --gutter:    clamp(1.25rem, 0.5rem + 3.2vw, 3.5rem);
+  --measure:   66ch;
+
+  --bar-h: 3.75rem;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --fast: 160ms var(--ease);
+  --base: 260ms var(--ease);
+}
+
+/* --- 2. Reset -------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--bar-h) + 1.5rem);
+}
+
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: var(--t-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img, svg { display: block; max-width: 100%; }
+address { font-style: normal; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; padding: 0; }
+
+::selection { background: var(--mark); color: var(--paper); }
+
+:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+.on-ink :focus-visible { outline-color: var(--mark-on-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* --- 3. Type roles --------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+  text-wrap: balance;
+}
+
+.display {
+  font-size: var(--t-display);
+  line-height: 0.99;
+  letter-spacing: -0.032em;
+}
+
+.h1 { font-size: var(--t-h1); letter-spacing: -0.026em; }
+.h2 { font-size: var(--t-h2); letter-spacing: -0.022em; }
+.h3 { font-size: var(--t-h3); line-height: 1.25; }
+
+.lead {
+  font-size: var(--t-lead);
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 46ch;
+  text-wrap: pretty;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  display: block;
+}
+
+.meta {
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  line-height: 1.6;
+  color: var(--text-3);
+}
+
+.num {
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  letter-spacing: 0.04em;
+  color: var(--mark);
+}
+
+/* --- 4. Links -------------------------------------------- */
+
+a { color: inherit; }
+
+.link-u {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--fast), color var(--fast);
+}
+.link-u:hover { color: var(--mark); text-decoration-color: currentColor; }
+
+.cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55em;
+  padding-block: 0.3rem; /* keeps a standalone call to action >= 24px tall */
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text);
+  transition: color var(--fast);
+}
+.cta::after {
+  content: "\2192";
+  font-family: var(--serif);
+  transition: transform var(--base);
+}
+.cta:hover { color: var(--mark); }
+.cta:hover::after { transform: translateX(0.28em); }
+
+/* --- 5. Buttons ------------------------------------------ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  border: 1px solid transparent;
+  border-radius: 0;
+  min-height: 44px;
+  transition: background-color var(--fast), color var(--fast), border-color var(--fast);
+}
+
+.btn--solid { background: var(--ink); color: var(--paper); }
+.btn--solid:hover { background: var(--mark); }
+
+.btn--line { border-color: var(--rule-input); color: var(--text); }
+.btn--line:hover { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+
+.on-ink .btn--solid { background: var(--paper); color: var(--ink); }
+.on-ink .btn--solid:hover { background: var(--mark-on-ink); color: var(--ink); }
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  align-items: center;
+}
+/* Below this width two buttons never sit side by side without raggedness. */
+@media (max-width: 30rem) {
+  .btn-row { flex-direction: column; align-items: stretch; }
+}
+
+/* --- 6. Layout ------------------------------------------- */
+
+.wrap {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+main { flex: 1 0 auto; }
+
+.section { padding-block: var(--section-y); }
+
+.section--ruled { border-top: 1px solid var(--rule); position: relative; }
+.section--ruled::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: 0;
+  width: 3.5rem; height: 1px;
+  background: var(--mark);
+}
+
+.on-ink { background: var(--ink); color: var(--text-on-ink); }
+.on-ink .label,
+.on-ink .lead { color: var(--text-2-on-ink); }
+.on-ink .num { color: var(--mark-on-ink); }
+
+/* Editorial split: marginal label column + content column */
+.split {
+  display: grid;
+  gap: var(--s5);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 60rem) {
+  .split {
+    grid-template-columns: minmax(8rem, 1fr) minmax(0, 4.1fr);
+    gap: var(--s7) clamp(2rem, 5vw, 5rem);
+  }
+  .split__aside { padding-top: 0.5rem; }
+}
+
+.section-head {
+  display: grid;
+  gap: var(--s4);
+  margin-bottom: var(--s7);
+}
+@media (min-width: 60rem) {
+  .section-head {
+    grid-template-columns: minmax(8rem, 1fr) minmax(0, 4.1fr);
+    gap: var(--s7) clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+  .section-head .label { padding-top: 0.5rem; }
+}
+.section-head__body > * + * { margin-top: var(--s4); }
+
+/* --- 7. Masthead ----------------------------------------- */
+
+.skip {
+  position: absolute;
+  left: var(--s4); top: -4rem;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  padding: 0.75rem 1.1rem;
+  text-decoration: none;
+  transition: top var(--fast);
+}
+.skip:focus { top: var(--s2); }
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--paper);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--fast);
+}
+.masthead[data-scrolled="true"],
+.masthead[data-open="true"] { border-bottom-color: var(--rule); }
+
+.masthead__bar {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  min-height: var(--bar-h);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.34em;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: auto;
+}
+.wordmark span { color: var(--text-3); font-weight: 400; }
+.wordmark::after {
+  content: "";
+  width: 0.36em; height: 0.36em;
+  background: var(--mark);
+  transition: transform var(--base);
+}
+.wordmark:hover::after { transform: translateY(-0.3em); }
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2rem);
+}
+@media (min-width: 62rem) { .nav { display: flex; } }
+
+.nav__item {
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-2);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+  transition: color var(--fast), border-color var(--fast);
+}
+.nav__item:hover { color: var(--text); border-bottom-color: var(--mark); }
+.nav__item[aria-current="page"] { color: var(--text); border-bottom-color: var(--ink); }
+
+.nav__toggle { display: inline-flex; align-items: center; gap: 0.55em; }
+.nav__toggle::after {
+  content: "";
+  width: 0.4em; height: 0.4em;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-0.18em) rotate(45deg);
+  transition: transform var(--base);
+}
+.nav__toggle[aria-expanded="true"]::after { transform: translateY(0.08em) rotate(225deg); }
+.nav__toggle[aria-expanded="true"] { color: var(--text); border-bottom-color: var(--mark); }
+
+.burger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  width: 44px; height: 44px;
+  margin-right: -0.65rem;
+}
+.burger span {
+  display: block;
+  width: 20px; height: 1.5px;
+  background: var(--ink);
+  transition: transform var(--base), opacity var(--fast), width var(--base);
+}
+.burger span:nth-child(2) { width: 13px; }
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { width: 20px; transform: translateY(-6.5px) rotate(-45deg); }
+@media (min-width: 62rem) { .burger { display: none; } }
+
+/* --- 8. Index panel (services menu / mobile nav) --------- */
+
+.panel {
+  position: fixed;
+  inset: var(--bar-h) 0 0;
+  z-index: 90;
+  background: var(--paper);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-top: 1px solid var(--rule);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+  transition: opacity var(--base), transform var(--base), visibility var(--base);
+}
+.panel[data-open="true"] { opacity: 1; visibility: visible; transform: none; }
+
+@media (min-width: 62rem) {
+  .panel {
+    position: absolute;
+    inset: auto 0 auto 0;
+    top: 100%;
+    max-height: calc(100vh - var(--bar-h));
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+/* Separates the open dropdown from the page behind it. Below 62rem the
+   panel covers the viewport on its own, so the scrim stays out of the way. */
+.scrim {
+  position: fixed;
+  inset: var(--bar-h) 0 0;
+  z-index: 80;
+  background: rgba(25, 26, 24, 0.32);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--base), visibility var(--base);
+}
+@media (min-width: 62rem) {
+  .masthead[data-open="true"] .scrim {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.panel__inner { padding-block: var(--s6) var(--s8); }
+
+.panel__primary {
+  display: grid;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--s5);
+  margin-bottom: var(--s5);
+}
+@media (min-width: 62rem) { .panel__primary { display: none; } }
+
+.panel__primary a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  padding: 0.45rem 0;
+  transition: color var(--fast);
+}
+.panel__primary a:hover { color: var(--mark); }
+.panel__primary a[aria-current="page"] { color: var(--mark); }
+
+.panel__groups { display: grid; gap: var(--s6) clamp(1.5rem, 3vw, 3rem); }
+@media (min-width: 48rem) { .panel__groups { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 62rem) {
+  .panel__groups { grid-template-columns: repeat(3, 1fr); gap: var(--s6) clamp(2rem, 4vw, 4rem); }
+}
+
+.panel__group h2 {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--s2);
+}
+
+.idx { display: grid; }
+.idx a {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  align-items: baseline;
+  gap: 0.25rem;
+  padding: 0.42rem 0;
+  text-decoration: none;
+  font-size: var(--t-small);
+  line-height: 1.4;
+  color: var(--text-2);
+  transition: color var(--fast);
+}
+.idx a:hover,
+.idx a:hover .idx__n { color: var(--mark); }
+.idx__n {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  transition: color var(--fast);
+}
+.idx a[aria-current="page"] { color: var(--text); font-weight: 600; }
+.idx a[aria-current="page"] .idx__n { color: var(--mark); }
+
+.panel__foot {
+  margin-top: var(--s6);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3) var(--s6);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+body[data-locked="true"] { overflow: hidden; }
+
+/* --- 9. Hero --------------------------------------------- */
+
+.hero { padding-block: clamp(3rem, 1.5rem + 7vw, 8rem) clamp(2.5rem, 1rem + 5vw, 5.5rem); }
+.hero__eyebrow { margin-bottom: clamp(1.5rem, 4vw, 2.75rem); }
+.hero__title { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); max-width: 17ch; }
+/* Break the headline on its own sentences once there is room for them. */
+@media (min-width: 56rem) {
+  .hero__title { max-width: none; }
+  .hero__title span { display: block; }
+}
+
+.hero__body {
+  display: grid;
+  gap: var(--s6) clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+@media (min-width: 62rem) {
+  .hero__body { grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr); }
+}
+
+.hero__lead { max-width: 50ch; margin-bottom: var(--s6); }
+
+/* Colophon-style fact table */
+.facts { border-top: 1px solid var(--rule); }
+.facts > div {
+  display: grid;
+  grid-template-columns: minmax(5rem, 7rem) 1fr;
+  gap: var(--s3);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  line-height: 1.5;
+}
+.facts dt {
+  color: var(--text-3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: var(--t-label);
+  padding-top: 0.2em;
+}
+.facts dd { color: var(--text-2); }
+.facts a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+  transition: color var(--fast), border-color var(--fast);
+}
+.facts a:hover { color: var(--mark); border-color: var(--mark); }
+
+/* --- 10. Statement --------------------------------------- */
+
+.statement {
+  font-size: clamp(1.45rem, 1.05rem + 1.7vw, 2.4rem);
+  line-height: 1.26;
+  letter-spacing: -0.024em;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+.statement strong { font-weight: 600; }
+@media (min-width: 48rem) {
+  .statement { max-width: 26ch; text-wrap: balance; }
+}
+
+/* --- 11. Practice index ---------------------------------- */
+
+.practice { border-top: 1px solid var(--rule); padding-top: var(--s5); }
+.practice + .practice { margin-top: var(--s8); }
+
+.practice__head { margin-bottom: var(--s5); }
+.practice__title {
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.2rem);
+  letter-spacing: -0.024em;
+  margin-block: 0.4rem 0.6rem;
+}
+.practice__desc { color: var(--text-2); max-width: 56ch; }
+
+.svc-list { border-top: 1px solid var(--rule); }
+
+.svc {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: baseline;
+  gap: 0.2rem var(--s3);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  transition: background-color var(--fast), padding-left var(--base);
+}
+.svc:hover { background: var(--paper-raised); padding-left: 0.6rem; }
+.svc:hover .svc__name { color: var(--mark); }
+
+.svc__n {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  padding-top: 0.3em;
+}
+.svc__name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  transition: color var(--fast);
+}
+.svc__desc {
+  grid-column: 2;
+  font-size: var(--t-small);
+  color: var(--text-3);
+  line-height: 1.55;
+  max-width: 62ch;
+  margin-top: 0.25rem;
+}
+@media (min-width: 62rem) {
+  .svc { grid-template-columns: 2.5rem minmax(0, 1.05fr) minmax(0, 1.3fr); }
+  .svc__desc { grid-column: 3; margin-top: 0; }
+}
+
+.svc--flag .svc__name { color: var(--mark); }
+.svc--flag .svc__desc em { font-style: italic; color: var(--text-2); }
+
+/* --- 12. Numbered steps ---------------------------------- */
+
+.steps { display: grid; border-top: 1px solid var(--rule); }
+@media (min-width: 48rem) {
+  .steps { grid-template-columns: repeat(2, 1fr); column-gap: clamp(2rem, 5vw, 5rem); }
+}
+@media (min-width: 72rem) { .steps { grid-template-columns: repeat(3, 1fr); } }
+
+.step { padding: var(--s5) 0; border-bottom: 1px solid var(--rule); }
+.step__n {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.1em;
+  color: var(--mark);
+  display: block;
+  margin-bottom: 0.7rem;
+}
+.step h3 { margin-bottom: 0.45rem; font-size: var(--t-h3); }
+.step p { font-size: var(--t-small); color: var(--text-3); line-height: 1.6; max-width: 42ch; }
+
+/* --- 13. Report contents (dark) -------------------------- */
+
+.contents { border-top: 1px solid var(--rule-on-ink); }
+@media (min-width: 48rem) {
+  .contents { columns: 2; column-gap: clamp(2rem, 6vw, 6rem); }
+}
+.contents li {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  align-items: baseline;
+  gap: var(--s3);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--rule-on-ink);
+  font-size: 1.0625rem;
+  break-inside: avoid;
+}
+
+/* --- 14. Principles -------------------------------------- */
+
+.principles { display: grid; border-top: 1px solid var(--rule); }
+@media (min-width: 48rem) {
+  .principles { grid-template-columns: repeat(2, 1fr); column-gap: clamp(2rem, 6vw, 6rem); }
+}
+.principle { padding: var(--s5) 0; border-bottom: 1px solid var(--rule); }
+.principle h3 { margin-bottom: 0.5rem; }
+.principle p { color: var(--text-2); font-size: var(--t-small); line-height: 1.65; max-width: 48ch; }
+
+/* --- 15. Inline sector list ------------------------------ */
+
+.sectors {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.6rem);
+  line-height: 1.5;
+  letter-spacing: -0.018em;
+}
+.sectors li { display: inline-flex; align-items: center; }
+.sectors li:not(:first-child)::before {
+  content: "";
+  width: 0.26em; height: 0.26em;
+  background: var(--rule-strong);
+  margin-inline: 0.72em;
+  flex: none;
+}
+
+/* --- 16. Interior page header ---------------------------- */
+
+.crumb {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+.crumb a {
+  display: inline-block;
+  padding-block: 0.35rem;
+  text-decoration: none;
+  transition: color var(--fast);
+}
+.crumb a:hover { color: var(--mark); }
+.crumb span[aria-hidden] { color: var(--text-3); }
+.crumb [aria-current] { color: var(--text-2); }
+
+.page-head { padding-block: clamp(2rem, 1rem + 4vw, 4rem) clamp(2.5rem, 1.5rem + 4vw, 5rem); }
+.page-head__title { margin-bottom: var(--s5); max-width: 20ch; }
+
+/* Service pages run flush left so the title block sits on the same axis
+   as the document body beneath it. */
+.doc-head { max-width: 58rem; }
+.doc-head__cat { margin-bottom: var(--s4); }
+.doc-head__cat a {
+  display: inline-block;
+  padding-block: 0.35rem;
+  text-decoration: none;
+  transition: color var(--fast);
+}
+.doc-head__cat a:hover { color: var(--mark); }
+
+/* --- 17. Prose ------------------------------------------- */
+
+.prose { max-width: var(--measure); }
+.prose > * + * { margin-top: 1.15em; }
+.prose h2 {
+  font-size: clamp(1.3rem, 1.15rem + 0.7vw, 1.65rem);
+  letter-spacing: -0.02em;
+  margin-top: 2.4em;
+  padding-top: 1.1em;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+.prose h2::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: 0;
+  width: 2rem; height: 1px;
+  background: var(--mark);
+}
+.prose > h2:first-child { margin-top: 0; }
+.prose h3 { margin-top: 1.9em; font-size: var(--t-h3); }
+.prose p { color: var(--text-2); line-height: 1.72; text-wrap: pretty; }
+.prose strong { color: var(--text); font-weight: 600; }
+.prose ul { margin-top: 1.15em; }
+.prose li {
+  position: relative;
+  padding-left: 1.4rem;
+  padding-block: 0.3rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+.prose li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.88em;
+  width: 0.45rem; height: 1px;
+  background: var(--mark);
+}
+.prose a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 0.2em;
+}
+.prose a:hover { color: var(--mark); text-decoration-color: currentColor; }
+
+/* --- 18. Document layout (service pages) ----------------- */
+
+/* Capped so the text column and the margin notes stay a fixed gutter apart
+   instead of drifting into a hole on wide screens. */
+.doc { display: grid; gap: var(--s8) clamp(2rem, 4vw, 4.5rem); }
+@media (min-width: 64rem) {
+  .doc {
+    max-width: 58rem;
+    grid-template-columns: minmax(0, 1fr) 17rem;
+    align-items: start;
+  }
+}
+
+.aside { display: grid; gap: var(--s6); }
+@media (min-width: 64rem) {
+  .aside { position: sticky; top: calc(var(--bar-h) + 2rem); }
+}
+
+.aside__block { border-top: 1px solid var(--ink); padding-top: var(--s4); }
+.aside__block h2 {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--s3);
+}
+.aside__links { display: grid; }
+.aside__links a {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  font-size: var(--t-small);
+  color: var(--text-2);
+  transition: color var(--fast), padding-left var(--base);
+}
+.aside__links a:hover { color: var(--mark); padding-left: 0.4rem; }
+.aside__note { font-size: var(--t-small); color: var(--text-3); line-height: 1.6; margin-bottom: var(--s4); }
+
+.aside--alert { background: var(--ink); color: var(--text-on-ink); padding: var(--s5); border-top: 0; }
+.aside--alert h2 { color: var(--mark-on-ink); }
+.aside--alert .aside__note { color: var(--text-2-on-ink); }
+.aside--alert strong { color: var(--text-on-ink); }
+
+/* --- 19. Forms ------------------------------------------- */
+
+.form { max-width: 34rem; }
+.field { margin-bottom: var(--s5); }
+.field label {
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 0.55rem;
+}
+.field label .opt { color: var(--text-3); letter-spacing: 0.06em; text-transform: none; }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-input);
+  border-radius: 2px;
+  padding: 0.75rem 0.85rem;
+  font-size: var(--t-body);
+  line-height: 1.5;
+  transition: border-color var(--fast);
+}
+.field textarea { min-height: 9rem; resize: vertical; }
+.field select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--text-2) 50%),
+    linear-gradient(135deg, var(--text-2) 50%, transparent 50%);
+  background-position: calc(100% - 1.15rem) 1.3rem, calc(100% - 0.8rem) 1.3rem;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.5rem;
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-3); opacity: 1; }
+.field input:hover,
+.field select:hover,
+.field textarea:hover { border-color: var(--text-3); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--ink); outline-offset: 1px; }
+
+.field__error {
+  display: none;
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  color: var(--mark-deep);
+  margin-top: 0.45rem;
+}
+.field[data-invalid="true"] input,
+.field[data-invalid="true"] select,
+.field[data-invalid="true"] textarea { border-color: var(--mark-deep); }
+.field[data-invalid="true"] .field__error { display: block; }
+
+.form__note {
+  font-size: var(--t-small);
+  color: var(--text-3);
+  line-height: 1.6;
+  margin-bottom: var(--s5);
+  max-width: 44ch;
+}
+
+.form-done { border-top: 1px solid var(--mark); padding-top: var(--s5); max-width: 34rem; }
+.form-done h2 { margin-bottom: var(--s3); }
+.form-done p { color: var(--text-2); }
+
+/* --- 20. Sector entries ---------------------------------- */
+
+.sector-list { border-top: 1px solid var(--rule); }
+.sector { display: grid; gap: 0.4rem var(--s7); padding: var(--s5) 0; border-bottom: 1px solid var(--rule); }
+@media (min-width: 60rem) {
+  .sector { grid-template-columns: 2.5rem minmax(0, 1fr) minmax(0, 1.55fr); align-items: baseline; }
+}
+.sector__n {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+}
+.sector h2 { font-size: var(--t-h3); letter-spacing: -0.015em; }
+.sector p { color: var(--text-2); font-size: var(--t-small); line-height: 1.65; }
+
+/* --- 21. Colophon ---------------------------------------- */
+
+.colophon {
+  background: var(--ink);
+  color: var(--text-on-ink);
+  padding-block: clamp(3rem, 2rem + 4vw, 5rem) var(--s6);
+}
+
+.colophon__grid { display: grid; gap: var(--s7) clamp(2rem, 5vw, 4rem); padding-bottom: var(--s7); }
+@media (min-width: 48rem) { .colophon__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .colophon__grid { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; } }
+
+.colophon h2 {
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-2-on-ink);
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--rule-on-ink);
+  margin-bottom: var(--s3);
+}
+.colophon__links { display: grid; }
+.colophon__links a {
+  padding: 0.35rem 0;
+  font-size: var(--t-small);
+  text-decoration: none;
+  color: var(--text-2-on-ink);
+  transition: color var(--fast);
+}
+.colophon__links a:hover { color: var(--mark-on-ink); }
+
+.colophon .wordmark { color: var(--text-on-ink); font-size: 1.25rem; margin-right: 0; }
+.colophon .wordmark span { color: var(--text-2-on-ink); }
+.colophon .wordmark::after { background: var(--mark-on-ink); }
+
+.colophon__blurb {
+  color: var(--text-2-on-ink);
+  font-size: var(--t-small);
+  line-height: 1.65;
+  max-width: 34ch;
+  margin-top: var(--s4);
+}
+
+.colophon__contact { display: grid; gap: 0.3rem; margin-top: var(--s4); }
+.colophon__contact a,
+.colophon__contact span {
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  color: var(--text-2-on-ink);
+  text-decoration: none;
+  line-height: 1.55;
+  transition: color var(--fast);
+}
+.colophon__contact a:hover { color: var(--mark-on-ink); }
+
+.colophon__base {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3) var(--s5);
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: var(--s5);
+  border-top: 1px solid var(--rule-on-ink);
+  font-family: var(--mono);
+  font-size: var(--t-meta);
+  color: var(--text-2-on-ink);
+}
+.colophon__base nav { display: flex; flex-wrap: wrap; gap: var(--s5); }
+.colophon__base a { text-decoration: none; transition: color var(--fast); }
+.colophon__base a:hover { color: var(--mark-on-ink); }
+
+/* --- 22. Error page -------------------------------------- */
+
+.error { padding-block: clamp(4rem, 2rem + 9vw, 10rem); }
+.error__code {
+  font-family: var(--mono);
+  font-size: clamp(3.5rem, 2rem + 8vw, 7rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--mark);
+  margin-bottom: var(--s5);
+}
+
+/* --- 23. Entrance (first paint only) --------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter > * { animation: rise 620ms var(--ease) backwards; }
+  .enter > *:nth-child(1) { animation-delay: 40ms; }
+  .enter > *:nth-child(2) { animation-delay: 110ms; }
+  .enter > *:nth-child(3) { animation-delay: 180ms; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(0.7rem); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
+/* --- 24. Utilities --------------------------------------- */
+
+.flow-t { margin-top: var(--s6); }
+.flow-t-lg { margin-top: var(--s7); }
+.measure { max-width: 58ch; }
+.measure > * + * { margin-top: var(--s4); }
+
+/* --- 25. Print ------------------------------------------- */
+/* Service pages get read on paper and forwarded as PDFs. */
+
+@media print {
+  .masthead, .colophon, .aside, .skip, .btn-row, .scrim { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .wrap { max-width: none; padding-inline: 0; }
+  .section, .page-head { padding-block: 0 1rem; }
+  .doc { display: block; max-width: none; }
+  .prose { max-width: none; }
+  .prose h2 { break-after: avoid; }
+  .prose li, .prose p { break-inside: avoid; }
+}

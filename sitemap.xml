@@ -7,11 +7,13 @@
   <url><loc>https://sleuthforensics.in/services/vapt.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/network-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/application-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://sleuthforensics.in/services/ot-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/mobile-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/cloud-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/identity-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/endpoint-security.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/digital-forensics.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://sleuthforensics.in/services/mobile-spyware.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/dfir.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/incident-response.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/services/compromise-assessment.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -23,7 +25,6 @@
   <url><loc>https://sleuthforensics.in/services/compliance.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/industries.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://sleuthforensics.in/resources.html</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://sleuthforensics.in/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://sleuthforensics.in/privacy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://sleuthforensics.in/terms.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>

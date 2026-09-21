@@ -1,1115 +1,522 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHT1ZTL52J"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    gtag('config', 'G-XHT1ZTL52J');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sleuth Forensics — Cybersecurity Services &amp; Digital Forensics | India</title>
-  <meta name="description"
-    content="Sleuth Forensics provides cybersecurity consulting, digital forensics, incident response, penetration testing, and security assessment services to organizations across India.">
+  <title>Sleuth Forensics &mdash; Cybersecurity assessment, digital forensics &amp; incident response</title>
+  <meta name="description" content="A cybersecurity and digital forensics practice in Bengaluru. Penetration testing, security audits, forensic investigation, incident response, and compliance advisory for organisations across India.">
   <link rel="canonical" href="https://sleuthforensics.in/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sleuth Forensics — Cybersecurity Services &amp; Digital Forensics">
-  <meta property="og:description"
-    content="Cybersecurity consulting, digital forensics, incident response, and security assessment services for organizations across India.">
-  <meta property="og:url" content="https://sleuthforensics.in/">
   <meta property="og:site_name" content="Sleuth Forensics">
+  <meta property="og:title" content="Sleuth Forensics &mdash; Cybersecurity assessment, digital forensics &amp; incident response">
+  <meta property="og:description" content="A cybersecurity and digital forensics practice in Bengaluru. Penetration testing, security audits, forensic investigation, incident response, and compliance advisory for organisations across India.">
+  <meta property="og:url" content="https://sleuthforensics.in/">
+  <meta property="og:image" content="https://sleuthforensics.in/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sleuth Forensics — Cybersecurity Services &amp; Digital Forensics">
-  <meta name="twitter:description"
-    content="Cybersecurity consulting, digital forensics, incident response, and security assessment services for organizations across India.">
+  <meta name="theme-color" content="#f2efe8">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/main.css?v=5">
-  <link rel="stylesheet" href="css/pages.css?v=5">
-
-  <!-- Structured Data -->
+  <script defer src="js/site.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Sleuth Forensics",
-    "description": "Cybersecurity consulting, digital forensics, incident response, and security assessment services.",
+    "description": "Cybersecurity assessment, digital forensics, and incident response services for organisations in India.",
     "url": "https://sleuthforensics.in/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
     "areaServed": "IN",
-    "serviceType": ["Cybersecurity Consulting", "Digital Forensics", "Incident Response", "Penetration Testing"]
+    "serviceType": [
+      "Cybersecurity Consulting",
+      "Penetration Testing",
+      "Digital Forensics",
+      "Incident Response",
+      "Compromise Assessment",
+      "Red Teaming"
+    ]
   }
   </script>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHT1ZTL52J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XHT1ZTL52J');
+  </script>
 </head>
-
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ====================================================== -->
-  <!--  Header                                                 -->
-  <!-- ====================================================== -->
+  <header class="masthead" data-scrolled="false" data-open="false">
+    <div class="wrap masthead__bar">
+      <a class="wordmark" href="index.html">Sleuth <span>Forensics</span></a>
 
-  <header class="header" role="banner">
-    <div class="header__inner">
-      <a href="index.html" class="header__logo" aria-label="Sleuth Forensics — Home">
-        <!-- Logo: Magnifying glass + digital trace -->
-        <svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true">
-  <!-- Outer glass rim with a thicker stroke -->
-  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
-  <!-- Glass inner highlight/gradient hint -->
-  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
-  <!-- A minimal digital/circuit node inside -->
-  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
-  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
-  <!-- The handle, styled with a distinct cap -->
-  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
-  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
-</svg>
-        <span class="header__logo-text">Sleuth <span>Forensics</span></span>
-      </a>
-
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <button id="services-toggle" class="nav__link" aria-expanded="false" aria-controls="mega-menu">
-          Services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            aria-hidden="true">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </button>
-        <a href="industries.html" class="nav__link">Industries</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="resources.html" class="nav__link">Insights</a>
-        <a href="contact.html" class="nav__link">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <button type="button" id="nav-services" class="nav__item nav__toggle" data-panel-trigger aria-expanded="false" aria-controls="index-panel">Services</button>
+        <a class="nav__item" href="industries.html">Industries</a>
+        <a class="nav__item" href="about.html">About</a>
+        <a class="nav__item" href="contact.html">Contact</a>
       </nav>
 
-      <div class="header__actions">
-        <a href="contact.html" class="btn btn--primary btn--sm">Request Consultation</a>
-      </div>
-
-      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav"
-        aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
+      <button type="button" id="nav-menu" class="burger" data-panel-trigger aria-expanded="false" aria-controls="index-panel" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
 
-    <!-- Mega Menu -->
-    <div id="mega-menu" class="mega-menu" role="region" aria-label="Services menu">
-      <div class="mega-menu__inner">
-        <div class="mega-menu__column">
-          <h3>Security</h3>
-          <a href="services/cybersecurity-consulting.html" class="mega-menu__link">Cybersecurity Consulting</a>
-          <a href="services/security-audits.html" class="mega-menu__link">Security Audits &amp; Reviews</a>
-          <a href="services/vapt.html" class="mega-menu__link">Vulnerability Assessment &amp; Penetration Testing</a>
-          <a href="services/network-security.html" class="mega-menu__link">Network Security</a>
-          <a href="services/application-security.html" class="mega-menu__link">Application &amp; API Security</a>
-          <a href="services/ot-security.html" class="mega-menu__link">OT Security Maturity Assessment</a>
-          <a href="services/mobile-security.html" class="mega-menu__link">Mobile Application Security</a>
-          <a href="services/cloud-security.html" class="mega-menu__link">Cloud Security</a>
-          <a href="services/identity-security.html" class="mega-menu__link">Identity &amp; Active Directory
-            Security</a>
-          <a href="services/endpoint-security.html" class="mega-menu__link">Endpoint Security</a>
-        </div>
-        <div class="mega-menu__column">
-          <h3>Investigation</h3>
-          <a href="services/digital-forensics.html" class="mega-menu__link">Digital Forensics &amp; Cyber
-            Investigations</a>
-          <a href="services/mobile-spyware.html" class="mega-menu__link" style="color: var(--blue-accent);">Mobile
-            Phone Spyware Detection — <i>Is someone listening to your conversations?</i></a>
-          <a href="services/dfir.html" class="mega-menu__link">Digital Forensics &amp; Incident Response</a>
-          <a href="services/incident-response.html" class="mega-menu__link">Incident Response &amp; Breach
-            Investigation</a>
-          <a href="services/compromise-assessment.html" class="mega-menu__link">Compromise Assessment &amp; Threat
-            Hunting</a>
-          <a href="services/malware-analysis.html" class="mega-menu__link">Malware Analysis &amp; Reverse
-            Engineering</a>
-        </div>
-        <div class="mega-menu__column">
-          <h3>Resilience</h3>
-          <a href="services/ransomware.html" class="mega-menu__link">Ransomware Investigation &amp; Readiness</a>
-          <a href="services/threat-intelligence.html" class="mega-menu__link">Threat Intelligence &amp; Attack Surface
-            Monitoring</a>
-          <a href="services/security-operations.html" class="mega-menu__link">Security Operations Maturity Assessment /
-            SIEM / SOC Consulting</a>
-          <a href="services/red-team.html" class="mega-menu__link">Red Teaming &amp; Adversary Simulation</a>
-          <a href="services/compliance.html" class="mega-menu__link">Cybersecurity Compliance, GRC &amp; vCISO</a>
-          <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--border);">
-            <a href="services/index.html" class="mega-menu__link" style="font-weight: 600; color: var(--blue-primary);">View All
-              Services</a>
+    <div class="scrim" aria-hidden="true"></div>
+
+    <div class="panel" id="index-panel" data-open="false">
+      <div class="wrap panel__inner">
+        <nav class="panel__primary" aria-label="Sections">
+          <a href="services/index.html">All services</a>
+          <a href="industries.html">Industries</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="panel__groups">
+        <nav class="panel__group" aria-labelledby="idx-security">
+          <h2 id="idx-security">Security</h2>
+          <div class="idx">
+            <a href="services/cybersecurity-consulting.html"><span class="idx__n">01</span><span>Cybersecurity Consulting</span></a>
+            <a href="services/security-audits.html"><span class="idx__n">02</span><span>Security Audits &amp; Reviews</span></a>
+            <a href="services/vapt.html"><span class="idx__n">03</span><span>Penetration Testing</span></a>
+            <a href="services/network-security.html"><span class="idx__n">04</span><span>Network Security</span></a>
+            <a href="services/application-security.html"><span class="idx__n">05</span><span>Application &amp; API Security</span></a>
+            <a href="services/ot-security.html"><span class="idx__n">06</span><span>OT Security Maturity</span></a>
+            <a href="services/mobile-security.html"><span class="idx__n">07</span><span>Mobile Application Security</span></a>
+            <a href="services/cloud-security.html"><span class="idx__n">08</span><span>Cloud Security</span></a>
+            <a href="services/identity-security.html"><span class="idx__n">09</span><span>Identity &amp; Active Directory</span></a>
+            <a href="services/endpoint-security.html"><span class="idx__n">10</span><span>Endpoint Security</span></a>
           </div>
+        </nav>
+        <nav class="panel__group" aria-labelledby="idx-investigation">
+          <h2 id="idx-investigation">Investigation</h2>
+          <div class="idx">
+            <a href="services/digital-forensics.html"><span class="idx__n">11</span><span>Digital Forensics</span></a>
+            <a href="services/mobile-spyware.html"><span class="idx__n">12</span><span>Mobile Spyware Detection</span></a>
+            <a href="services/dfir.html"><span class="idx__n">13</span><span>Digital Forensics &amp; IR</span></a>
+            <a href="services/incident-response.html"><span class="idx__n">14</span><span>Incident Response</span></a>
+            <a href="services/compromise-assessment.html"><span class="idx__n">15</span><span>Compromise Assessment</span></a>
+            <a href="services/malware-analysis.html"><span class="idx__n">16</span><span>Malware Analysis</span></a>
+          </div>
+        </nav>
+        <nav class="panel__group" aria-labelledby="idx-resilience">
+          <h2 id="idx-resilience">Resilience</h2>
+          <div class="idx">
+            <a href="services/ransomware.html"><span class="idx__n">17</span><span>Ransomware Readiness</span></a>
+            <a href="services/threat-intelligence.html"><span class="idx__n">18</span><span>Threat Intelligence</span></a>
+            <a href="services/security-operations.html"><span class="idx__n">19</span><span>Security Operations &amp; SOC</span></a>
+            <a href="services/red-team.html"><span class="idx__n">20</span><span>Red Teaming</span></a>
+            <a href="services/compliance.html"><span class="idx__n">21</span><span>Compliance, GRC &amp; vCISO</span></a>
+          </div>
+        </nav>
+        </div>
+
+        <div class="panel__foot">
+          <p class="meta">Sleuth Forensics Consultancy Services &middot; Bengaluru, Karnataka, India</p>
+          <a class="cta" href="contact.html">Send an enquiry</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation -->
-  <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
-    <div class="mobile-nav__accordion">
-      <button class="mobile-nav__accordion-trigger" aria-expanded="false">
-        Services
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          aria-hidden="true">
-          <path d="M6 9l6 6 6-6" />
-        </svg>
-      </button>
-      <div class="mobile-nav__accordion-body">
-        <div class="mobile-nav__sub-heading">Security</div>
-        <a href="services/cybersecurity-consulting.html" class="mobile-nav__sub-link">Cybersecurity Consulting</a>
-        <a href="services/security-audits.html" class="mobile-nav__sub-link">Security Audits &amp; Reviews</a>
-        <a href="services/vapt.html" class="mobile-nav__sub-link">VAPT</a>
-        <a href="services/network-security.html" class="mobile-nav__sub-link">Network Security</a>
-        <a href="services/application-security.html" class="mobile-nav__sub-link">Application &amp; API Security</a>
-        <a href="services/ot-security.html" class="mobile-nav__sub-link">OT Security Maturity</a>
-        <a href="services/mobile-security.html" class="mobile-nav__sub-link">Mobile Application Security</a>
-        <a href="services/cloud-security.html" class="mobile-nav__sub-link">Cloud Security</a>
-        <a href="services/identity-security.html" class="mobile-nav__sub-link">Identity &amp; AD Security</a>
-        <a href="services/endpoint-security.html" class="mobile-nav__sub-link">Endpoint Security</a>
-        <div class="mobile-nav__sub-heading">Investigation</div>
-        <a href="services/digital-forensics.html" class="mobile-nav__sub-link">Digital Forensics</a>
-        <a href="services/mobile-spyware.html" class="mobile-nav__sub-link" style="color: var(--blue-accent);">Mobile
-          Spyware Detection</a>
-        <a href="services/dfir.html" class="mobile-nav__sub-link">DFIR</a>
-        <a href="services/incident-response.html" class="mobile-nav__sub-link">Incident Response</a>
-        <a href="services/compromise-assessment.html" class="mobile-nav__sub-link">Compromise Assessment</a>
-        <a href="services/malware-analysis.html" class="mobile-nav__sub-link">Malware Analysis</a>
-        <div class="mobile-nav__sub-heading">Resilience</div>
-        <a href="services/ransomware.html" class="mobile-nav__sub-link">Ransomware</a>
-        <a href="services/threat-intelligence.html" class="mobile-nav__sub-link">Threat Intelligence</a>
-        <a href="services/security-operations.html" class="mobile-nav__sub-link">SecOps Maturity / SIEM / SOC</a>
-        <a href="services/red-team.html" class="mobile-nav__sub-link">Red Teaming</a>
-        <a href="services/compliance.html" class="mobile-nav__sub-link">Compliance, GRC &amp; vCISO</a>
-        <a href="services/index.html" class="mobile-nav__sub-link"
-          style="font-weight:600; color: var(--blue-primary); margin-top: var(--space-2);">View All Services</a>
-      </div>
-    </div>
-    <a href="industries.html" class="mobile-nav__link">Industries</a>
-    <a href="about.html" class="mobile-nav__link">About</a>
-    <a href="resources.html" class="mobile-nav__link">Insights</a>
-    <a href="contact.html" class="mobile-nav__link">Contact</a>
-    <div class="mobile-nav__cta">
-      <a href="contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">Request
-        Consultation</a>
-    </div>
-  </nav>
+  <main id="main">
 
+    <section class="hero">
+      <div class="wrap enter">
+        <p class="label hero__eyebrow">Cybersecurity &amp; digital forensics &middot; Bengaluru, India</p>
 
-  <main id="main-content">
+        <h1 class="display hero__title"><span>Find out what happened.</span> <span>Then fix what allowed it.</span></h1>
 
-    <!-- ====================================================== -->
-    <!--  Hero                                                   -->
-    <!-- ====================================================== -->
-
-    ```html
-    <section class="hero-slider" id="main-hero-slider">
-      <div class="hero-slider__slides">
-
-        <!-- Slide 1: Core -->
-        <div class="hero-slide active">
-          <div class="container">
-            <div class="hero__content">
-              <span class="hero__label">Cybersecurity &amp; Digital Forensics</span>
-
-              <h1 class="hero__title">
-                Investigate. Respond.<br>Strengthen.
-              </h1>
-
-              <p class="hero__desc">
-                Understand where your environment is exposed, investigate what matters, and turn
-                technical findings into a practical security improvement plan.
-              </p>
-
-              <div class="hero__actions">
-                <a href="contact.html" class="btn btn--primary btn--lg">
-                  Request a Consultation
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-
-                <a href="services/" class="btn btn--outline-light btn--lg">
-                  Explore Services
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Decorative SVG -->
-          <svg class="hero__visual" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <line x1="100" y1="0" x2="100" y2="400" stroke="rgba(91,155,213,0.3)" stroke-width="1" />
-
-            <line x1="0" y1="100" x2="200" y2="100" stroke="rgba(91,155,213,0.15)" stroke-width="1" />
-
-            <line x1="0" y1="200" x2="200" y2="200" stroke="rgba(91,155,213,0.15)" stroke-width="1" />
-
-            <line x1="0" y1="300" x2="200" y2="300" stroke="rgba(91,155,213,0.15)" stroke-width="1" />
-
-            <circle cx="100" cy="60" r="4" fill="rgba(91,155,213,0.5)" />
-
-            <circle cx="100" cy="140" r="3" fill="rgba(91,155,213,0.4)" />
-
-            <circle cx="100" cy="200" r="5" fill="rgba(91,155,213,0.6)" />
-
-            <circle cx="100" cy="280" r="3" fill="rgba(91,155,213,0.4)" />
-
-            <circle cx="100" cy="350" r="4" fill="rgba(91,155,213,0.5)" />
-
-            <circle cx="40" cy="100" r="2" fill="rgba(91,155,213,0.3)" />
-
-            <circle cx="160" cy="100" r="2" fill="rgba(91,155,213,0.3)" />
-
-            <circle cx="50" cy="200" r="2" fill="rgba(91,155,213,0.3)" />
-
-            <circle cx="150" cy="300" r="2" fill="rgba(91,155,213,0.3)" />
-
-            <rect x="90" y="190" width="20" height="20" stroke="rgba(91,155,213,0.4)" stroke-width="1" fill="none"
-              rx="2" />
-          </svg>
-        </div>
-
-
-        <!-- Slide 2: DFIR -->
-        <div class="hero-slide">
-          <div class="container">
-            <div class="hero__content">
-              <span class="hero__label">Rapid Incident Response</span>
-
-              <h1 class="hero__title">
-                When Every<br>Second Counts.
-              </h1>
-
-              <p class="hero__desc">
-                Elite DFIR capabilities to contain breaches, eradicate threats, and restore business
-                operations with minimal downtime and data loss.
-              </p>
-
-              <div class="hero__actions">
-                <a href="contact.html" class="btn btn--primary btn--lg">
-                  Report an Incident
-                </a>
-
-                <a href="services/dfir.html" class="btn btn--outline-light btn--lg">
-                  Learn About DFIR
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Decorative SVG: Large, wide, compact Shield/Lock motif -->
-          <svg class="hero__visual hero__visual--dfir" viewBox="0 0 200 400" fill="none"
-            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <!-- Outer shield -->
-            <path d="M100 45
-             L175 80
-             V145
-             C175 200 100 280 100 280
-             C100 280 25 200 25 145
-             V80 Z" stroke="rgba(91,155,213,0.3)" stroke-width="2" />
-
-            <!-- Lock / security core -->
-            <circle cx="100" cy="145" r="20" stroke="rgba(91,155,213,0.4)" stroke-width="2" />
-
-            <!-- Lock stem -->
-            <path d="M100 145 V185" stroke="rgba(91,155,213,0.5)" stroke-width="2" />
-
-            <!-- Lock indicator -->
-            <circle cx="100" cy="185" r="4" fill="rgba(91,155,213,0.5)" />
-
-            <!-- Pulsing rings -->
-            <circle class="pulse-ring pulse-ring-1" cx="100" cy="145" r="45" stroke="rgba(91,155,213,0.15)"
-              stroke-width="1" />
-
-            <circle class="pulse-ring pulse-ring-2" cx="100" cy="145" r="65" stroke="rgba(91,155,213,0.1)"
-              stroke-width="1" />
-          </svg>
-        </div>
-
-
-        <!-- Slide 3: VAPT -->
-        <div class="hero-slide">
-          <div class="container">
-            <div class="hero__content">
-              <span class="hero__label">Proactive Security</span>
-
-              <h1 class="hero__title">
-                Find the Gaps<br>Before They Do.
-              </h1>
-
-              <p class="hero__desc">
-                Comprehensive penetration testing, red teaming, and vulnerability assessments to
-                secure your most critical infrastructure and assets.
-              </p>
-
-              <div class="hero__actions">
-                <a href="contact.html" class="btn btn--primary btn--lg">
-                  Schedule Assessment
-                </a>
-
-                <a href="services/vapt.html" class="btn btn--outline-light btn--lg">
-                  Explore VAPT
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Decorative SVG: Target/Crosshair motif for Pentesting -->
-          <svg class="hero__visual" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="100" cy="200" r="80" stroke="rgba(91,155,213,0.2)" stroke-width="1" stroke-dasharray="4 4" />
-
-            <circle cx="100" cy="200" r="40" stroke="rgba(91,155,213,0.3)" stroke-width="1" />
-
-            <circle cx="100" cy="200" r="10" fill="rgba(91,155,213,0.5)" />
-
-            <line x1="0" y1="200" x2="80" y2="200" stroke="rgba(91,155,213,0.4)" stroke-width="1" />
-
-            <line x1="120" y1="200" x2="200" y2="200" stroke="rgba(91,155,213,0.4)" stroke-width="1" />
-
-            <line x1="100" y1="100" x2="100" y2="180" stroke="rgba(91,155,213,0.4)" stroke-width="1" />
-
-            <line x1="100" y1="220" x2="100" y2="300" stroke="rgba(91,155,213,0.4)" stroke-width="1" />
-
-            <rect x="95" y="195" width="10" height="10" stroke="rgba(91,155,213,0.6)" stroke-width="1" fill="none" />
-          </svg>
-        </div>
-
-      </div>
-
-
-      <!-- Navigation Arrows -->
-      <button class="hero-slider__arrow hero-slider__arrow--prev" aria-label="Previous slide">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" />
-        </svg>
-      </button>
-
-      <button class="hero-slider__arrow hero-slider__arrow--next" aria-label="Next slide">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          aria-hidden="true">
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </button>
-
-
-      <!-- Progress Bar (Candle-stick) -->
-      <div class="hero-slider__progress-container">
-        <div class="hero-slider__progress-track">
-          <div class="hero-slider__progress-fill"></div>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  Services Marquee                                       -->
-    <!-- ====================================================== -->
-
-    <div class="marquee-section" aria-hidden="true">
-      <div class="marquee-container">
-        <div class="marquee-item">Penetration Testing<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Digital Forensics<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Incident Response<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Security Audits<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Compromise Assessment<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Red Teaming<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Cloud Security<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Threat Intelligence<span class="marquee-separator">—¢</span></div>
-        <!-- Duplicate for seamless scroll -->
-        <div class="marquee-item">Penetration Testing<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Digital Forensics<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Incident Response<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Security Audits<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Compromise Assessment<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Red Teaming<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Cloud Security<span class="marquee-separator">—¢</span></div>
-        <div class="marquee-item">Threat Intelligence<span class="marquee-separator">—¢</span></div>
-      </div>
-    </div>
-
-
-    <!-- ====================================================== -->
-    <!--  Proposition                                            -->
-    <!-- ====================================================== -->
-
-    <section class="section proposition" aria-labelledby="proposition-heading">
-      <div class="container">
-        <div class="proposition__content reveal">
-          <span class="section-header__label">Who We Are</span>
-          <h2 id="proposition-heading" class="t-h2" style="margin-bottom: var(--space-6);">A cybersecurity services and
-            digital forensics firm that helps organisations understand, test, investigate, and improve their security
-            posture.</h2>
-          <p class="proposition__text">Sleuth Forensics works with organisations across India to assess security
-            controls, identify vulnerabilities, investigate suspicious activity, respond to cyber incidents, and build
-            long-term resilience. We combine technical depth with clear, actionable reporting.</p>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  Capability Pillars                                     -->
-    <!-- ====================================================== -->
-
-    <section class="section" aria-labelledby="capabilities-heading">
-      <div class="container">
-        <div class="section-header--center reveal">
-          <span class="section-header__label">What We Do</span>
-          <h2 id="capabilities-heading" class="section-header__title">Three areas of focus</h2>
-          <p class="section-header__desc">Our services span security assessment, digital investigation, and operational
-            resilience to provide comprehensive coverage for your cybersecurity needs.</p>
-        </div>
-
-        <div class="pillars">
-
-          <!-- Security -->
-          <div class="pillar reveal">
-            <div class="pillar__number">01 — Security</div>
-            <h3 class="pillar__title">Assess &amp; Strengthen</h3>
-            <p class="pillar__desc">Evaluate your security controls, identify vulnerabilities, and prioritise
-              improvements across your infrastructure, applications, and cloud environments.</p>
-            <ul class="pillar__list">
-              <li>Cybersecurity Consulting</li>
-              <li>Security Audits &amp; Reviews</li>
-              <li>Penetration Testing</li>
-              <li>Network &amp; Cloud Security</li>
-              <li>Application &amp; API Security</li>
-              <li>Identity &amp; Endpoint Security</li>
-            </ul>
-            <a href="services/#security" class="card__link">
-              Explore Security Services
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-          <!-- Investigation -->
-          <div class="pillar reveal">
-            <div class="pillar__number">02 — Investigation</div>
-            <h3 class="pillar__title">Investigate &amp; Respond</h3>
-            <p class="pillar__desc">Determine what happened, establish scope, reconstruct timelines, and support
-              containment and recovery when incidents occur or suspicious activity is identified.</p>
-            <ul class="pillar__list">
-              <li>Digital Forensics</li>
-              <li>Incident Response</li>
-              <li>Breach Investigation</li>
-              <li>Compromise Assessment</li>
-              <li>Threat Hunting</li>
-              <li>Malware Analysis</li>
-            </ul>
-            <a href="services/#investigation" class="card__link">
-              Explore Investigation Services
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-          <!-- Resilience -->
-          <div class="pillar reveal">
-            <div class="pillar__number">03 — Resilience</div>
-            <h3 class="pillar__title">Prepare &amp; Sustain</h3>
-            <p class="pillar__desc">Build organisational readiness for evolving threats through proactive security
-              operations, adversary simulation, compliance programmes, and strategic guidance.</p>
-            <ul class="pillar__list">
-              <li>Ransomware Readiness</li>
-              <li>Threat Intelligence</li>
-              <li>Security Operations / SOC</li>
-              <li>Red Teaming</li>
-              <li>GRC &amp; Compliance</li>
-              <li>vCISO Advisory</li>
-            </ul>
-            <a href="services/#resilience" class="card__link">
-              Explore Resilience Services
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  DFIR Highlight                                         -->
-    <!-- ====================================================== -->
-
-    <section class="section section--dark" aria-labelledby="dfir-heading">
-      <div class="container">
-        <div class="grid grid--2 reveal" style="align-items: center;">
+        <div class="hero__body">
           <div>
-            <span class="section-header__label">Digital Forensics &amp; Incident Response</span>
-            <h2 id="dfir-heading" class="section-header__title" style="color: var(--white);">When incidents happen,
-              evidence matters</h2>
-            <p style="color: var(--gray-300); line-height: var(--leading-relaxed); margin-bottom: var(--space-6);">Our
-              forensics and incident response practice helps organisations establish what happened, determine the scope
-              of compromise, reconstruct attacker activity, and support containment and recovery with structured,
-              evidence-driven analysis.</p>
-            <ul style="margin-bottom: var(--space-8);">
-              <li
-                style="color: var(--gray-300); padding: var(--space-2) 0; font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-3);">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"
-                  stroke-linecap="round" aria-hidden="true">
-                  <path d="M9 11l3 3L22 4" />
-                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-                </svg>
-                Establish facts and reconstruct timelines
-              </li>
-              <li
-                style="color: var(--gray-300); padding: var(--space-2) 0; font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-3);">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"
-                  stroke-linecap="round" aria-hidden="true">
-                  <path d="M9 11l3 3L22 4" />
-                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-                </svg>
-                Identify affected systems and data
-              </li>
-              <li
-                style="color: var(--gray-300); padding: var(--space-2) 0; font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-3);">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"
-                  stroke-linecap="round" aria-hidden="true">
-                  <path d="M9 11l3 3L22 4" />
-                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-                </svg>
-                Support containment and eradication
-              </li>
-              <li
-                style="color: var(--gray-300); padding: var(--space-2) 0; font-size: var(--text-sm); display: flex; align-items: center; gap: var(--space-3);">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"
-                  stroke-linecap="round" aria-hidden="true">
-                  <path d="M9 11l3 3L22 4" />
-                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-                </svg>
-                Produce actionable findings and recommendations
-              </li>
-            </ul>
-            <a href="services/dfir.html" class="btn btn--outline-light">Learn About Our DFIR Services</a>
+            <p class="lead hero__lead">Sleuth Forensics tests environments before something goes wrong and investigates them after. Either way, the output is the same: evidence you can check, and recommendations your team can act on.</p>
+            <div class="btn-row">
+              <a class="btn btn--solid" href="contact.html">Start a conversation</a>
+              <a class="btn btn--line" href="services/index.html">All 21 services</a>
+            </div>
           </div>
-          <div style="display: flex; justify-content: center;">
-            <!-- Investigation lifecycle visual -->
-            <svg width="320" height="280" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true" style="opacity: 0.7;">
-              <!-- Timeline axis -->
-              <line x1="40" y1="240" x2="290" y2="240" stroke="rgba(91,155,213,0.4)" stroke-width="1" />
-              <!-- Vertical tick marks -->
-              <line x1="80" y1="235" x2="80" y2="245" stroke="rgba(91,155,213,0.5)" stroke-width="1" />
-              <line x1="140" y1="235" x2="140" y2="245" stroke="rgba(91,155,213,0.5)" stroke-width="1" />
-              <line x1="200" y1="235" x2="200" y2="245" stroke="rgba(91,155,213,0.5)" stroke-width="1" />
-              <line x1="260" y1="235" x2="260" y2="245" stroke="rgba(91,155,213,0.5)" stroke-width="1" />
-              <!-- Labels -->
-              <text x="80" y="265" text-anchor="middle" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="9">DETECT</text>
-              <text x="140" y="265" text-anchor="middle" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="9">RESPOND</text>
-              <text x="200" y="265" text-anchor="middle" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="9">ANALYZE</text>
-              <text x="260" y="265" text-anchor="middle" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="9">RECOVER</text>
-              <!-- Evidence markers -->
-              <rect x="60" y="60" width="80" height="50" rx="4" stroke="rgba(91,155,213,0.3)"
-                fill="rgba(91,155,213,0.05)" />
-              <text x="70" y="78" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="8">EVIDENCE_001</text>
-              <text x="70" y="95" fill="rgba(91,155,213,0.4)" font-family="var(--font-mono)"
-                font-size="7">disk_img.e01</text>
-              <rect x="170" y="40" width="90" height="50" rx="4" stroke="rgba(91,155,213,0.3)"
-                fill="rgba(91,155,213,0.05)" />
-              <text x="180" y="58" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="8">TIMELINE_REF</text>
-              <text x="180" y="75" fill="rgba(91,155,213,0.4)" font-family="var(--font-mono)"
-                font-size="7">events.json</text>
-              <rect x="120" y="140" width="100" height="50" rx="4" stroke="rgba(91,155,213,0.3)"
-                fill="rgba(91,155,213,0.05)" />
-              <text x="130" y="158" fill="rgba(91,155,213,0.6)" font-family="var(--font-mono)"
-                font-size="8">IOC_MATCH</text>
-              <text x="130" y="175" fill="rgba(91,155,213,0.4)" font-family="var(--font-mono)"
-                font-size="7">sha256:4f2a8c...</text>
-              <!-- Connecting lines -->
-              <line x1="100" y1="110" x2="140" y2="140" stroke="rgba(91,155,213,0.25)" stroke-width="1"
-                stroke-dasharray="4 4" />
-              <line x1="215" y1="90" x2="190" y2="140" stroke="rgba(91,155,213,0.25)" stroke-width="1"
-                stroke-dasharray="4 4" />
-              <line x1="170" y1="190" x2="160" y2="235" stroke="rgba(91,155,213,0.25)" stroke-width="1"
-                stroke-dasharray="4 4" />
-              <!-- Data nodes -->
-              <circle cx="80" cy="200" r="3" fill="rgba(91,155,213,0.5)" />
-              <circle cx="200" cy="210" r="3" fill="rgba(91,155,213,0.5)" />
-              <circle cx="260" cy="190" r="3" fill="rgba(91,155,213,0.5)" />
-            </svg>
+
+          <dl class="facts">
+            <div><dt>Practices</dt><dd>Security, Investigation, Resilience</dd></div>
+            <div><dt>Services</dt><dd><a href="services/index.html">21, across three practices</a></dd></div>
+            <div><dt>Based in</dt><dd>Bengaluru, Karnataka, India</dd></div>
+            <div><dt>Enquiries</dt><dd><a href="contact.html">Via the enquiry form</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="position">
+      <div class="wrap split">
+        <p class="label split__aside">01 &middot; Position</p>
+        <div>
+          <h2 class="statement" id="position"><strong>Evidence first.</strong> Everything we report is something we observed, recorded, and can show you.</h2>
+          <div class="flow-t-lg measure">
+            <p>Sleuth Forensics works with organisations across India to assess security controls, test for vulnerabilities, investigate suspicious activity, respond to incidents, and build resilience over time.</p>
+            <p>Assessment work is manual as well as automated, because the findings that change a decision are rarely the ones a scanner prints. Investigation work is documented as evidence, because sooner or later somebody senior will ask how you know.</p>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ====================================================== -->
-    <!--  Why Sleuth Forensics                                   -->
-    <!-- ====================================================== -->
-
-    <section class="section" aria-labelledby="why-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-header__label">Why Sleuth Forensics</span>
-          <h2 id="why-heading" class="section-header__title">An approach built on evidence and clarity</h2>
-          <p class="section-header__desc">We focus on producing findings that organisations can understand, prioritise,
-            and act on, not just technical output.</p>
-        </div>
-
-        <div class="why-grid">
-
-          <div class="why-item reveal">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
-              <rect x="9" y="3" width="6" height="4" rx="1" />
-              <path d="M9 14l2 2 4-4" />
-            </svg>
-            <div>
-              <h3 class="why-item__title">Evidence-Driven Analysis</h3>
-              <p class="why-item__desc">Every finding is supported by evidence. We present what was observed, where it
-                was found, and why it matters, rather than speculative or generic conclusions.</p>
-            </div>
-          </div>
-
-          <div class="why-item reveal">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2" />
-              <path d="M8 21h8M12 17v4" />
-              <path d="M7 10h2M7 13h4" />
-            </svg>
-            <div>
-              <h3 class="why-item__title">Technical Depth</h3>
-              <p class="why-item__desc">Our assessments go beyond automated scanning. We combine manual analysis,
-                structured methodologies, and technical expertise to identify risks that tools alone cannot find.</p>
-            </div>
-          </div>
-
-          <div class="why-item reveal">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
-              <path d="M14 2v6h6" />
-              <path d="M8 13h8M8 17h6" />
-            </svg>
-            <div>
-              <h3 class="why-item__title">Clear, Actionable Reporting</h3>
-              <p class="why-item__desc">Reports include executive summaries alongside technical detail, with prioritised
-                recommendations that translate directly into improvement actions for your team.</p>
-            </div>
-          </div>
-
-          <div class="why-item reveal">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-            <div>
-              <h3 class="why-item__title">Structured Methodology</h3>
-              <p class="why-item__desc">A consistent, repeatable approach to every engagement ensures thoroughness and
-                quality, regardless of scope. From scoping to final validation, each phase has defined objectives and
-                outputs.</p>
-            </div>
-          </div>
-
-          <div class="why-item reveal">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            <div>
-              <h3 class="why-item__title">Confidentiality</h3>
-              <p class="why-item__desc">Security assessments and investigations involve sensitive information. We
-                maintain strict confidentiality and handle all engagement data with appropriate care and discretion.</p>
-            </div>
-          </div>
-
-          <div class="why-item reveal">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-            </svg>
-            <div>
-              <h3 class="why-item__title">Business-Aware Recommendations</h3>
-              <p class="why-item__desc">We contextualise technical findings within your business environment, producing
-                recommendations that account for practical constraints, regulatory considerations, and operational
-                priorities.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  Methodology                                            -->
-    <!-- ====================================================== -->
-
-    <section class="section section--alt" aria-labelledby="methodology-heading">
-      <div class="container">
-        <div class="section-header--center reveal">
-          <span class="section-header__label">Our Approach</span>
-          <h2 id="methodology-heading" class="section-header__title">A structured, repeatable methodology</h2>
-          <p class="section-header__desc">Every engagement follows a consistent process designed to maximise
-            thoroughness, minimise disruption, and produce findings you can act on immediately.</p>
-        </div>
-
-        <div class="methodology">
-          <div class="method-step reveal">
-            <div class="method-step__number">01</div>
-            <h3 class="method-step__title">Understand</h3>
-            <p class="method-step__desc">Understand the environment, business objectives, risk context, and specific
-              concerns that shape the engagement scope.</p>
-          </div>
-          <div class="method-step reveal">
-            <div class="method-step__number">02</div>
-            <h3 class="method-step__title">Examine</h3>
-            <p class="method-step__desc">Review systems, configurations, controls, evidence, and telemetry through
-              manual and structured analysis techniques.</p>
-          </div>
-          <div class="method-step reveal">
-            <div class="method-step__number">03</div>
-            <h3 class="method-step__title">Analyse</h3>
-            <p class="method-step__desc">Correlate findings across data sources, determine meaningful risk, and
-              establish the real-world impact of identified issues.</p>
-          </div>
-          <div class="method-step reveal">
-            <div class="method-step__number">04</div>
-            <h3 class="method-step__title">Report</h3>
-            <p class="method-step__desc">Present clear evidence, severity ratings, business impact, and prioritised
-              recommendations in structured deliverables.</p>
-          </div>
-          <div class="method-step reveal">
-            <div class="method-step__number">05</div>
-            <h3 class="method-step__title">Improve</h3>
-            <p class="method-step__desc">Provide practical remediation guidance and an improvement roadmap that your
-              team can implement systematically.</p>
-          </div>
-          <div class="method-step reveal">
-            <div class="method-step__number">06</div>
-            <h3 class="method-step__title">Validate</h3>
-            <p class="method-step__desc">Where applicable, verify that implemented improvements have addressed the
-              identified issues and reduced exposure effectively.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  Industries                                             -->
-    <!-- ====================================================== -->
-
-    <section class="section" aria-labelledby="industries-heading">
-      <div class="container">
-        <div class="section-header--center reveal">
-          <span class="section-header__label">Industries</span>
-          <h2 id="industries-heading" class="section-header__title">Security across sectors</h2>
-          <p class="section-header__desc">We work with organisations across industries where cybersecurity, data
-            protection, and operational resilience are priorities.</p>
-        </div>
-
-        <div class="industries-grid">
-          <div class="industry-card reveal">
-            <svg class="industry-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2" />
-              <path d="M8 21h8M12 17v4" />
-            </svg>
-            <h3 class="industry-card__title">Technology &amp; SaaS</h3>
-            <p class="industry-card__desc">Product security, infrastructure assessment, and secure development lifecycle
-              support for technology companies.</p>
-          </div>
-          <div class="industry-card reveal">
-            <svg class="industry-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-            </svg>
-            <h3 class="industry-card__title">Financial Services</h3>
-            <p class="industry-card__desc">Security assessments and compliance support for organisations handling
-              financial data and transactions.</p>
-          </div>
-          <div class="industry-card reveal">
-            <svg class="industry-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-            </svg>
-            <h3 class="industry-card__title">Healthcare</h3>
-            <p class="industry-card__desc">Protecting patient data, medical systems, and healthcare infrastructure with
-              appropriate security controls.</p>
-          </div>
-          <div class="industry-card reveal">
-            <svg class="industry-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M2 20h20M5 20V8l7-5 7 5v12" />
-              <path d="M9 20v-4h6v4" />
-            </svg>
-            <h3 class="industry-card__title">Manufacturing</h3>
-            <p class="industry-card__desc">Operational technology security, supply chain risk, and infrastructure
-              protection for manufacturing environments.</p>
-          </div>
-          <div class="industry-card reveal">
-            <svg class="industry-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-            </svg>
-            <h3 class="industry-card__title">Professional Services</h3>
-            <p class="industry-card__desc">Cybersecurity support for legal, consulting, and advisory firms handling
-              sensitive client information.</p>
-          </div>
-          <div class="industry-card reveal">
-            <svg class="industry-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <circle cx="9" cy="21" r="1" />
-              <circle cx="20" cy="21" r="1" />
-              <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
-            </svg>
-            <h3 class="industry-card__title">Retail &amp; E-Commerce</h3>
-            <p class="industry-card__desc">Payment security, platform security, and fraud prevention for online and
-              physical retail environments.</p>
+    <section class="section section--ruled" aria-labelledby="services-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">02 &middot; Services</p>
+          <div class="section-head__body">
+            <h2 class="h2" id="services-heading">Twenty-one services, three practices</h2>
+            <p class="lead">Grouped by what the work is for: testing what you have, investigating what has already happened, and preparing for what comes next.</p>
           </div>
         </div>
 
-        <div class="text-center mt-8 reveal">
-          <a href="industries.html" class="btn btn--secondary">View All Industries</a>
+      <section class="practice" id="security" aria-labelledby="practice-security">
+        <div class="practice__head">
+          <p class="label">Security</p>
+          <h3 class="practice__title" id="practice-security">Assess and strengthen</h3>
+          <p class="practice__desc">Test what you already have, find what is exposed, and prioritise the fixes that reduce real risk across infrastructure, applications, cloud, identity, and endpoints.</p>
         </div>
-      </div>
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  Reporting / Deliverables                               -->
-    <!-- ====================================================== -->
-
-    <section class="section section--dark" aria-labelledby="reporting-heading">
-      <div class="container">
-        <div class="section-header--center reveal">
-          <span class="section-header__label">Deliverables</span>
-          <h2 id="reporting-heading" class="section-header__title" style="color: var(--white);">Reporting that drives
-            decisions</h2>
-          <p class="section-header__desc" style="color: var(--gray-300);">Technical findings are translated into
-            structured reports designed for different stakeholders, from security engineers to board members.</p>
-        </div>
-
-        <div class="report-items reveal">
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
-              <path d="M14 2v6h6" />
-            </svg>
-            <span class="report-item__text">Executive Summary</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8" />
-              <path d="M21 21l-4.35-4.35" />
-            </svg>
-            <span class="report-item__text">Scope &amp; Methodology</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-              <path d="M12 9v4M12 17h.01" />
-            </svg>
-            <span class="report-item__text">Detailed Findings</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M9 11l3 3L22 4" />
-              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-            </svg>
-            <span class="report-item__text">Evidence &amp; Proof</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M18 20V10M12 20V4M6 20v-6" />
-            </svg>
-            <span class="report-item__text">Risk &amp; Impact Rating</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-              <path d="M22 4L12 14.01l-3-3" />
-            </svg>
-            <span class="report-item__text">Remediation Guidance</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
-            </svg>
-            <span class="report-item__text">Business Impact Analysis</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-            </svg>
-            <span class="report-item__text">Priority Roadmap</span>
-          </div>
-          <div class="report-item">
-            <svg class="report-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <path d="M3 9h18M9 21V9" />
-            </svg>
-            <span class="report-item__text">Technical Appendices</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!--  IR CTA Banner                                          -->
-    <!-- ====================================================== -->
-
-    <section class="section--sm ir-banner" aria-labelledby="ir-heading">
-      <div class="container">
-        <div class="ir-banner__inner" style="padding: var(--space-10) 0;">
-          <div class="ir-banner__content">
-            <div class="ir-banner__label">Incident Response</div>
-            <h2 id="ir-heading" class="ir-banner__title">Suspect a compromise?</h2>
-            <p class="ir-banner__desc">If your organisation is experiencing a suspected security incident, our incident
-              response team is available to help assess the situation, support containment, and guide your response.</p>
-          </div>
-          <a href="contact.html" class="btn btn--primary btn--lg">
-            Contact Our IR Team
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+        <div class="svc-list">
+          <a class="svc" href="services/cybersecurity-consulting.html">
+            <span class="svc__n">01</span>
+            <span class="svc__name">Cybersecurity Consulting &amp; Advisory</span>
+            <span class="svc__desc">Strategic security guidance, programme development, and expert advisory for organisations building or improving their security capabilities.</span>
+          </a>
+          <a class="svc" href="services/security-audits.html">
+            <span class="svc__n">02</span>
+            <span class="svc__name">Cybersecurity Audits &amp; Security Reviews</span>
+            <span class="svc__desc">Systematic review of controls, configurations, policies, and practices to find gaps and measure effectiveness against established frameworks.</span>
+          </a>
+          <a class="svc" href="services/vapt.html">
+            <span class="svc__n">03</span>
+            <span class="svc__name">Vulnerability Assessment &amp; Penetration Testing</span>
+            <span class="svc__desc">Identify and validate weaknesses through structured vulnerability assessment and manual penetration testing of your systems and applications.</span>
+          </a>
+          <a class="svc" href="services/network-security.html">
+            <span class="svc__n">04</span>
+            <span class="svc__name">Network Security Assessment &amp; Testing</span>
+            <span class="svc__desc">Evaluate network architecture, segmentation, device configurations, and perimeter controls to identify exposure and lateral movement risk.</span>
+          </a>
+          <a class="svc" href="services/application-security.html">
+            <span class="svc__n">05</span>
+            <span class="svc__name">Web Application &amp; API Security Testing</span>
+            <span class="svc__desc">Manual and automated testing of web applications and APIs for authentication, authorisation, injection, and business logic flaws.</span>
+          </a>
+          <a class="svc" href="services/ot-security.html">
+            <span class="svc__n">06</span>
+            <span class="svc__name">OT Security Maturity Assessment</span>
+            <span class="svc__desc">Assess the security posture of operational technology and industrial control systems so physical processes stay safe and available.</span>
+          </a>
+          <a class="svc" href="services/mobile-security.html">
+            <span class="svc__n">07</span>
+            <span class="svc__name">Mobile Application Security Testing</span>
+            <span class="svc__desc">Assessment of iOS and Android applications: local data storage, communication channels, authentication, and runtime protections.</span>
+          </a>
+          <a class="svc" href="services/cloud-security.html">
+            <span class="svc__n">08</span>
+            <span class="svc__name">Cloud Security Assessment &amp; Testing</span>
+            <span class="svc__desc">Review of cloud configurations, access controls, storage policies, and security practices across AWS, Azure, GCP, and other platforms.</span>
+          </a>
+          <a class="svc" href="services/identity-security.html">
+            <span class="svc__n">09</span>
+            <span class="svc__name">Active Directory &amp; Identity Security</span>
+            <span class="svc__desc">Assess Active Directory configuration, trust relationships, privilege escalation paths, and identity controls to reduce credential risk.</span>
+          </a>
+          <a class="svc" href="services/endpoint-security.html">
+            <span class="svc__n">10</span>
+            <span class="svc__name">Endpoint Security Assessment &amp; Hardening</span>
+            <span class="svc__desc">Evaluate endpoint configuration, security agent coverage, hardening baselines, and local privilege controls across workstations and servers.</span>
           </a>
         </div>
+      </section>
+      <section class="practice" id="investigation" aria-labelledby="practice-investigation">
+        <div class="practice__head">
+          <p class="label">Investigation</p>
+          <h3 class="practice__title" id="practice-investigation">Establish what happened</h3>
+          <p class="practice__desc">Forensic examination, incident response, and threat hunting. Determine the scope, reconstruct the timeline, and document the result as evidence.</p>
+        </div>
+        <div class="svc-list">
+          <a class="svc" href="services/digital-forensics.html">
+            <span class="svc__n">11</span>
+            <span class="svc__name">Digital Forensics &amp; Cyber Investigations</span>
+            <span class="svc__desc">Structured forensic examination of digital evidence to establish facts, reconstruct events, and support organisational decisions.</span>
+          </a>
+          <a class="svc svc--flag" href="services/mobile-spyware.html">
+            <span class="svc__n">12</span>
+            <span class="svc__name">Mobile Phone Spyware Detection</span>
+            <span class="svc__desc"><em>Is someone else listening to your conversations?</em> Detection of Pegasus, stalkerware, and stealth monitoring tools on iOS and Android.</span>
+          </a>
+          <a class="svc" href="services/dfir.html">
+            <span class="svc__n">13</span>
+            <span class="svc__name">Digital Forensics &amp; Incident Response</span>
+            <span class="svc__desc">Combined forensic analysis and incident response: investigate the incident, determine scope, and guide recovery while preserving evidence.</span>
+          </a>
+          <a class="svc" href="services/incident-response.html">
+            <span class="svc__n">14</span>
+            <span class="svc__name">Incident Response &amp; Breach Investigation</span>
+            <span class="svc__desc">Response support during an active incident, including containment guidance, forensic triage, and breach scope determination.</span>
+          </a>
+          <a class="svc" href="services/compromise-assessment.html">
+            <span class="svc__n">15</span>
+            <span class="svc__name">Compromise Assessment &amp; Threat Hunting</span>
+            <span class="svc__desc">Proactive search for indicators of compromise, persistent threats, and unauthorised activity that existing detection has missed.</span>
+          </a>
+          <a class="svc" href="services/malware-analysis.html">
+            <span class="svc__n">16</span>
+            <span class="svc__name">Malware Analysis &amp; Reverse Engineering</span>
+            <span class="svc__desc">Static and dynamic analysis of suspicious files to determine behaviour, capability, persistence mechanisms, and indicators of compromise.</span>
+          </a>
+        </div>
+      </section>
+      <section class="practice" id="resilience" aria-labelledby="practice-resilience">
+        <div class="practice__head">
+          <p class="label">Resilience</p>
+          <h3 class="practice__title" id="practice-resilience">Prepare for the next one</h3>
+          <p class="practice__desc">Detection and response maturity, adversary simulation, compliance programmes, and security leadership without a full-time hire.</p>
+        </div>
+        <div class="svc-list">
+          <a class="svc" href="services/ransomware.html">
+            <span class="svc__n">17</span>
+            <span class="svc__name">Ransomware Investigation &amp; Readiness</span>
+            <span class="svc__desc">Test your readiness for ransomware, investigate active incidents, and build response playbooks and recovery strategies.</span>
+          </a>
+          <a class="svc" href="services/threat-intelligence.html">
+            <span class="svc__n">18</span>
+            <span class="svc__name">Threat Intelligence &amp; Attack Surface Monitoring</span>
+            <span class="svc__desc">Monitor your external attack surface, track relevant threat actor activity, and surface exposed assets and leaked credentials.</span>
+          </a>
+          <a class="svc" href="services/security-operations.html">
+            <span class="svc__n">19</span>
+            <span class="svc__name">Security Operations, SIEM &amp; SOC Consulting</span>
+            <span class="svc__desc">Design, evaluate, and improve security operations: SIEM deployment, detection engineering, and SOC process maturity.</span>
+          </a>
+          <a class="svc" href="services/red-team.html">
+            <span class="svc__n">20</span>
+            <span class="svc__name">Red Teaming &amp; Adversary Simulation</span>
+            <span class="svc__desc">Objective-based adversary simulation that tests detection and response against realistic attacks on your critical assets.</span>
+          </a>
+          <a class="svc" href="services/compliance.html">
+            <span class="svc__n">21</span>
+            <span class="svc__name">Cybersecurity Compliance, GRC &amp; vCISO</span>
+            <span class="svc__desc">Compliance programme development, governance and risk management, regulatory alignment, and virtual CISO support.</span>
+          </a>
+        </div>
+      </section>
+
+        <p class="flow-t-lg"><a class="cta" href="services/index.html">Full services index</a></p>
       </div>
     </section>
 
+    <section class="section section--ruled" aria-labelledby="method-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">03 &middot; Method</p>
+          <div class="section-head__body">
+            <h2 class="h2" id="method-heading">How an engagement runs</h2>
+            <p class="lead">Six phases, in order. The scope changes from one engagement to the next; the sequence does not.</p>
+          </div>
+        </div>
 
-    <!-- ====================================================== -->
-    <!--  Contact Section Removed                                -->
-    <!-- ====================================================== -->
+        <div class="steps">
+        <div class="step">
+          <span class="step__n">01</span>
+          <h3>Understand</h3>
+          <p>Establish the environment, the business context, and the specific concern that prompted the engagement. Scope follows from this, not the other way round.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">02</span>
+          <h3>Examine</h3>
+          <p>Review systems, configurations, controls, evidence, and telemetry. Manual work where it matters, tooling where it scales.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">03</span>
+          <h3>Analyse</h3>
+          <p>Correlate findings across sources, separate noise from real risk, and establish what an issue would actually mean in your environment.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">04</span>
+          <h3>Report</h3>
+          <p>Set out the evidence, severity, business impact, and prioritised recommendations, in one document that reads at both technical and board level.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">05</span>
+          <h3>Improve</h3>
+          <p>Work through remediation with your team: practical guidance and a roadmap that accounts for what you can realistically change.</p>
+        </div>
+        <div class="step">
+          <span class="step__n">06</span>
+          <h3>Validate</h3>
+          <p>Retest the fixes. A finding is closed when we can show it is closed, not when a ticket is marked done.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-ink" aria-labelledby="report-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">04 &middot; Deliverables</p>
+          <div class="section-head__body">
+            <h2 class="h2" id="report-heading">What lands on your desk</h2>
+            <p class="lead">Reports follow the same structure every time, so findings can be compared across engagements and passed between audiences without being rewritten.</p>
+          </div>
+        </div>
+
+        <ol class="contents">
+          <li><span class="num">01</span><span>Executive summary</span></li>
+          <li><span class="num">02</span><span>Scope and methodology</span></li>
+          <li><span class="num">03</span><span>Detailed findings</span></li>
+          <li><span class="num">04</span><span>Evidence and proof of concept</span></li>
+          <li><span class="num">05</span><span>Risk and impact rating</span></li>
+          <li><span class="num">06</span><span>Remediation guidance</span></li>
+          <li><span class="num">07</span><span>Business impact analysis</span></li>
+          <li><span class="num">08</span><span>Prioritised roadmap</span></li>
+          <li><span class="num">09</span><span>Technical appendices</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="approach-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">05 &middot; Approach</p>
+          <div class="section-head__body">
+            <h2 class="h2" id="approach-heading">What we hold to</h2>
+          </div>
+        </div>
+
+        <div class="principles">
+        <div class="principle">
+          <h3 class="h3">Evidence over assumption</h3>
+          <p>Every finding states what was observed, where it was found, and why it matters. If we cannot show it, we do not report it.</p>
+        </div>
+        <div class="principle">
+          <h3 class="h3">Depth beyond the scanner</h3>
+          <p>Automated tools open the engagement, they do not close it. Business logic flaws, chained weaknesses, and attack paths are found by hand.</p>
+        </div>
+        <div class="principle">
+          <h3 class="h3">Written for two audiences</h3>
+          <p>The same report has to work for the engineer who will fix the issue and the director who has to fund the fix. We write both parts properly.</p>
+        </div>
+        <div class="principle">
+          <h3 class="h3">Confidentiality by default</h3>
+          <p>Assessments and investigations surface things organisations would rather not have in circulation. Engagement data is handled accordingly.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="sectors-heading">
+      <div class="wrap split">
+        <p class="label split__aside">06 &middot; Sectors</p>
+        <div>
+          <h2 class="h2" id="sectors-heading">Where we work</h2>
+          <ul class="sectors flow-t-lg">
+          <li>Technology &amp; SaaS</li>
+          <li>Financial services</li>
+          <li>Healthcare</li>
+          <li>Manufacturing</li>
+          <li>Professional services</li>
+          <li>Retail &amp; e-commerce</li>
+          <li>Education</li>
+          <li>Government &amp; public sector</li>
+          </ul>
+          <p class="flow-t-lg"><a class="cta" href="industries.html">Industry detail</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ruled" aria-labelledby="contact-heading">
+      <div class="wrap split">
+        <p class="label split__aside">Incident response</p>
+        <div>
+          <h2 class="h2" id="contact-heading">Suspect a compromise?</h2>
+          <p class="lead flow-t">Tell us what you are seeing and mark the enquiry urgent. We read those first, and we will say plainly whether we are the right people for it before anything else is agreed.</p>
+          <div class="btn-row flow-t-lg">
+            <a class="btn btn--solid" href="contact.html">Send an enquiry</a>
+            <a class="btn btn--line" href="services/dfir.html">How DFIR engagements run</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-
-  <!-- ====================================================== -->
-  <!--  Footer                                                 -->
-  <!-- ====================================================== -->
-
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
+  <footer class="colophon on-ink">
+    <div class="wrap">
+      <div class="colophon__grid">
         <div>
-          <a href="index.html" class="header__logo" style="margin-bottom: var(--space-2);">
-            <svg class="header__logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true" style="color: var(--blue-accent);">
-  <!-- Outer glass rim with a thicker stroke -->
-  <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="2.5" />
-  <!-- Glass inner highlight/gradient hint -->
-  <circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="0.75" opacity="0.3" stroke-dasharray="2 4" />
-  <!-- A minimal digital/circuit node inside -->
-  <path d="M10 13 L13 10 L16 13" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.7" />
-  <circle cx="13" cy="10" r="1.5" fill="currentColor" opacity="0.8" />
-  <!-- The handle, styled with a distinct cap -->
-  <line x1="20" y1="20" x2="27" y2="27" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
-  <line x1="24" y1="24" x2="28" y2="28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" opacity="0.4" />
-</svg>
-            <span class="header__logo-text" style="color: var(--white);">Sleuth <span
-                style="color: var(--gray-400);">Forensics</span></span>
-          </a>
-          <p class="footer__brand-desc">Cybersecurity services and digital forensics for organisations that take
-            security, investigations, and resilience seriously.</p>
+          <a class="wordmark" href="index.html">Sleuth <span>Forensics</span></a>
+          <p class="colophon__blurb">Cybersecurity assessment, digital forensics, and incident response for organisations that need findings they can act on.</p>
+          <div class="colophon__contact">
+            <span>Sleuth Forensics Consultancy Services</span>
+            <span>Bengaluru, Karnataka, India</span>
+            <a href="contact.html">Send an enquiry</a>
+          </div>
         </div>
 
         <div>
-          <h3 class="footer__heading">Services</h3>
-          <a href="services/cybersecurity-consulting.html" class="footer__link">Cybersecurity Consulting</a>
-          <a href="services/vapt.html" class="footer__link">Penetration Testing</a>
-          <a href="services/digital-forensics.html" class="footer__link">Digital Forensics</a>
-          <a href="services/dfir.html" class="footer__link">DFIR</a>
-          <a href="services/incident-response.html" class="footer__link">Incident Response</a>
-          <a href="services/red-team.html" class="footer__link">Red Teaming</a>
-          <a href="services/" class="footer__link" style="margin-top: var(--space-2);">All Services</a>
+          <h2>Security</h2>
+          <div class="colophon__links">
+            <a href="services/vapt.html">Penetration Testing</a>
+            <a href="services/security-audits.html">Security Audits</a>
+            <a href="services/cloud-security.html">Cloud Security</a>
+            <a href="services/application-security.html">Application Security</a>
+            <a href="services/ot-security.html">OT Security</a>
+          </div>
         </div>
 
         <div>
-          <h3 class="footer__heading">Company</h3>
-          <a href="about.html" class="footer__link">About Us</a>
-          <a href="industries.html" class="footer__link">Industries</a>
-          <a href="resources.html" class="footer__link">Insights</a>
-          <a href="contact.html" class="footer__link">Contact</a>
-          <a href="privacy.html" class="footer__link">Privacy Policy</a>
-          <a href="terms.html" class="footer__link">Terms of Service</a>
+          <h2>Investigation</h2>
+          <div class="colophon__links">
+            <a href="services/digital-forensics.html">Digital Forensics</a>
+            <a href="services/dfir.html">DFIR</a>
+            <a href="services/incident-response.html">Incident Response</a>
+            <a href="services/mobile-spyware.html">Spyware Detection</a>
+            <a href="services/malware-analysis.html">Malware Analysis</a>
+          </div>
+        </div>
+
+        <div>
+          <h2>Practice</h2>
+          <div class="colophon__links">
+            <a href="services/index.html">All 21 services</a>
+            <a href="industries.html">Industries</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
       </div>
 
-      <div class="footer__bottom">
-        <p>&copy; <span data-config="copyrightYear">2026</span> Sleuth Forensics. All rights reserved.</p>
-        <div class="footer__social">
-          <a href="LINKEDIN_URL_HERE" data-config="linkedin" aria-label="LinkedIn" target="_blank"
-            rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              aria-hidden="true">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </a>
-          <a href="TWITTER_URL_HERE" data-config="twitter" aria-label="X (Twitter)" target="_blank"
-            rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              aria-hidden="true">
-              <path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M13.232 10.232L20 4" />
-            </svg>
-          </a>
-        </div>
+      <div class="colophon__base">
+        <p>&copy; 2026 Sleuth Forensics</p>
+        <nav aria-label="Legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
       </div>
     </div>
   </footer>
-
-  <script src="config.js?v=5"></script>
-  <script src="js/main.js?v=5"></script>
 </body>
 
 </html>
-
